@@ -33,11 +33,11 @@
 }
 
 .ul-header-hover > li {
-    padding: 24px 0px;
+    padding: 16px 0px;
     position: relative;
     display: flex;
-    gap: 0.1rem;
-    margin-right: 30px;
+    gap: 0.05rem;
+    margin-right: 20px;
     align-items: center;
     justify-content: center;
 }
@@ -58,9 +58,21 @@
     z-index: 999 !important;
 }
 
+#front-menu-active {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.rotate-nav-icon {
+    transform: rotate(0deg);
+    transition: transform .3s;
+}
+
 .sub-menu {
-    transition: opacity 1s;
-    /* opacity: 0; */
+    transition: all .3s;
+    transform-origin: top;
+    transform: scaleY(0);
 }
 
 .item-image-round img {
