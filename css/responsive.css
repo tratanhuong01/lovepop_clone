@@ -8,8 +8,6 @@
     margin: auto;
 }
 
-
-
 @media (min-width: 576px) {
     .wrapper {
         max-width: 540px;
@@ -105,6 +103,20 @@
 @media (min-width: 1200px) {
     .wrapper {
         max-width: 1140px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1440px) {
+    .wrapper {
+        max-width: 1280px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1500px) {
+    .wrapper {
+        max-width: 1440px;
         margin: auto;
     }
 }
