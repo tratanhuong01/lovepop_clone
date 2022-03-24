@@ -1,0 +1,132 @@
+.input-header {
+    background-color: #eee;
+}
+
+.ul-header-hover > li a:hover {
+    cursor: pointer;
+    color: #ce2333;
+}
+
+.ul-header-hover li i {
+    cursor: pointer;
+    color: #ce2333;
+}
+
+.ul-header-hover > li {
+    padding: 1rem 0rem;
+    position: relative;
+    display: flex;
+    gap: 0.05rem;
+    margin-right: 1.25rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.ul-header-hover > li:last-child {
+    margin-right: 0;
+}
+
+.sub-menu {
+    transition: all .3s;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+
+.item-menu-hide {
+    display: none !important;
+}
+
+.menu-mobile {
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+}
+
+.menu-mobile ul {
+    padding: 0rem 0.7rem;
+    flex-direction: column !important;
+}
+
+.menu-mobile ul li:first-child {
+    border-top: 1px solid #ccc !important;
+    width: 100% !important;
+    padding: 1rem 0rem !important;
+    display: flex !important;
+    align-items: center !important;
+    margin-right: 0 !important;
+    justify-content: start !important;
+}
+
+.menu-mobile ul .item-menu {
+    padding: 1rem 0rem !important;
+    border-top: 1px solid #ccc !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    margin-right: 0 !important;
+    justify-content: space-between !important;
+}
+
+.menu-mobile ul .hidden {
+    display: none !important;
+}
+
+.menu-mobile ul .item-menu .sub-menu {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu-mobile ul li:first-child a {
+    font-size: 14px !important;
+}
+
+.menu-mobile ul .item-menu a {
+    font-size: 14px !important;
+}
+
+.menu-mobile ul .item-menu i {
+    transform: rotate(-90deg) !important;
+}
+
+.menu-mobile-main {
+    z-index: 999999 !important;
+}
+
+.menu-mobile-main ul .item-sub-menu {
+    padding: 1rem 0rem;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    justify-content: space-between;
+}
+
+.transition-menu-mobile {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: all .3s;
+}
+
+.transition-menu-mobile-active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(0%) !important;
+}
+
+#modal {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+.modal-active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: all .3s !important;
+}

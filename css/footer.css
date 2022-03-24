@@ -1,0 +1,8 @@
+.footer-list li {
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+.footer-list li a:hover {
+    color: #8a8a8a;
+}
