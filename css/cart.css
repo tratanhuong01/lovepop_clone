@@ -1,0 +1,17 @@
+#modal-cart {
+    z-index: 99999;
+    transform: translateX(100%);
+    visibility: hidden;
+    width: 420px;
+    transition: all .3s !important;
+}
+
+.modal-cart-active {
+    transform: translateX(0%) !important;
+    visibility: visible !important; 
+}
+
+.item-cart-modal {
+    box-shadow: 0 0 15px rgb(0 0 0 / 15%);
+    border: 1px solid #e6e6e6;
+}

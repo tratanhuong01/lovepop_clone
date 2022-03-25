@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovepop | Magical Pop Up Greeting Cards</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="./font/stylesheet.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/tailwind_custom.css">
+    <link rel="stylesheet" href="./css/detail-product.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        main: '#ce2333',
+                        first_nav: 'rgb(93, 63, 211)',
+                        yellow: '#F5CC0F',
+                        blue: '#1C59A9',
+                        star: '#F78D28',
+                        gray_first: '#757575',
+                        footer: '#333',
+                        twitter: '#2876b4',
+                        gray_border: '#e6e6e6',
+                        gray_bg: '#f9f9f9',
+                        facebook: '#3a589d',
+                        pinterest: '#cb2320',
+                        instagram: '#833ab4',
+                        green: '#2a522e',
+                        green_second: '#5BBA47'
+                    },
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="">
+
+    <header class="">
+        <div class="flex justify-center items-center bg-main item-bg cursor-pointer font-semibold
+        leading-4 h-8 md:h-10 select-none text-sm text-white">
+            <a>Free Shipping on all U.S. orders</a>
+        </div>
+        <div class="border-b border-solid border-gray-200">
+            <div class="content-wrapper flex py-4 px-6 md:px-0 items-center jutify-between">
+                <div class="w-4/5 lg:w-2/3 flex flex-row-reverse items-center lg:flex-row">
+                    <div class="flex-1 lg:flex-0 lg:w-1/2">
+                        <div class="md:w-10/12 lg:w-full relative">
+                            <input type="text" class="input-header text-xs w-full p-2"
+                                placeholder="What are you looking for?">
+                            <i class="bx bx-search text-xl cursor-pointer absolute top-1/2 right-3 
+                            transform -translate-y-1/2 text-gray-300"></i>
+                        </div>
+                    </div>
+                    <div class="mr-5 lg:mr-0 lg:w-1/2 flex gap-8 justify-center">
+                        <i id="btn-menu-mobile"
+                            class="bx bx-list-ul text-4xl block lg:hidden text-main cursor-pointer"></i>
+                        <a href="">
+                            <img src="./images/logo.svg" alt="" class="w-12 lg:w-auto" srcset="">
+                        </a>
+                    </div>
+                </div>
+                <div class="w-1/5 lg:w-1/3">
+                    <div class="flex justify-end gap-8 items-center">
+                        <a href="" class="hidden lg:block text-sm">Log in</a>
+                        <div class="relative">
+                            <a class="bx bxs-cart-alt text-main text-3xl btn-cart"></a>
+                            <span class="w-5 h-5 cursor-pointer absolute rounded-full text-xs border text-white font-300 
+                            border-solid border-white -top-1 -right-1 z-10 flex justify-center items-center"
+                                style="background-color: #008fce;">1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-b border-solid border-gray-200 md:border-white flex flex-col " id="sub-menu-mobile">
+            <div class="py-3 px-3 text-base font-400 flex lg:hidden justify-between items-center ">
+                <div class="flex items-center gap-0.5">
+                    <span id="return-menu-main" class="bx bx-chevron-left text-main text-3xl cursor-pointer"></span>
+                    <span id="label-sub-menu-display" class="font-semibold">Shop By Category</span>
+                </div>
+                <span class="cursor-pointer text-2xl btn-close-menu-mobile">&times;</span>
+            </div>
+            <ul id="sub-menu-display-mobile" class="flex-1 overflow-auto">
+
+            </ul>
+        </div>
+        <div class="border-b border-solid border-gray-200" id="menu-main">
+            <div class="py-3 flex px-3 text-base font-400 lg:hidden justify-between">
+                <span class="font-semibold">Shop By Category</span>
+                <span class="cursor-pointer text-2xl btn-close-menu-mobile">&times;</span>
+            </div>
+            <ul class="wrapper justify-center ul-header-hover flex items-center">
+                <li><a class="text-first_nav">Easter</a>
+                </li>
+                <li class="item-menu"><a>Shop by Occasion</a><i class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
+                    <ul
+                        class="sub-menu w-full absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30 left-0 bg-white">
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Wedding</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Spring</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Just Because</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Anniversary</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Thank You</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Get Well</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Sympathy</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Thinking of You</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Congratulations</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">New Baby</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Retirement</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Love</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Friendship</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Summer</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Graduation</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Fall</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Winter</a></li>
+                    </ul>
+                </li>
+                <li class="item-menu"><a>Shop by Holiday</a><i class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
+                    <ul
+                        class="sub-menu w-full absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30 left-0 bg-white">
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                    </ul>
+                </li>
+                <li class="item-menu"><a>Shop by Recipient</a><i
+                        class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
+                    <ul
+                        class="sub-menu w-full absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30 left-0 bg-white">
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                    </ul>
+                </li>
+                <li class="item-menu"><a>Shop by Product Type</a><i
+                        class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
+                    <ul
+                        class="sub-menu w-full absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30 left-0 bg-white">
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                    </ul>
+                </li>
+                <li class="item-menu item-menu-hide"><a>Shop Pop Culture</a><i
+                        class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
+                    <ul
+                        class="sub-menu w-full absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30 left-0 bg-white">
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                    </ul>
+                </li>
+                <li class="item-menu hidden md:block"><a>More</a><i
+                        class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
+                    <ul class=" sub-menu flex absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30
+                    left-0 bg-white">
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="w-full relative">
+
+        <div id="front-menu-active"
+            class="z-30 invisible bg-black bg-opacity-50 absolute top-0 left-0 right-0 bottom-0">
+        </div>
+
+        <section class="content-wrapper px-5 lg:px-0 py-8 lg:flex gap-8">
+            <div class="lg:w-7/12">
+                <ul
+                    class="w-full item-hover flex max-w-full overflow-hidden relative border-2 border-solid border-gray_border">
+                    <span
+                        class="bx bx-chevron-left cursor-pointer w-10 h-10 rounded-full text-2xl flex items-center
+                    absolute top-1/2 left-2 transform -translate-y-1/2 text-main bg-white border-main border-solid border 
+                    hover:text-white hover:bg-main justify-center big-button-slider-image item-display -translate-x-16">
+                    </span>
+                    <li class="flex-shrink-0 w-full">
+                        <img src="./images/detail-1.jpeg" class="w-full h-full object-cover" alt="" srcset="">
+                    </li>
+                    <li class="flex-shrink-0 w-full">
+                        <img src="./images/detail-2.jpeg" class="w-full h-full object-cover" alt="" srcset="">
+                    </li>
+                    <li class="flex-shrink-0 w-full">
+                        <img src="./images/detail-3.jpeg" class="w-full h-full object-cover" alt="" srcset="">
+                    </li>
+                    <li class="flex-shrink-0 w-full">
+                        <img src="./images/detail-4.jpeg" class="w-full h-full object-cover" alt="" srcset="">
+                    </li>
+                    <span class="bx bx-chevron-right cursor-pointer w-10 h-10 rounded-full text-2xl flex items-center
+                    absolute top-1/2 right-2 transform -translate-y-1/2 text-main bg-white border-main border-solid border 
+                    hover:text-white hover:bg-main justify-center big-button-slider-image item-display translate-x-16">
+                    </span>
+                </ul>
+                <ul class="hidden lg:flex mt-8 max-w-full w-full item-hover relative overflow-hidden justify-between">
+                    <span
+                        class="bx bx-chevron-left cursor-pointer w-10 h-10 rounded-full text-2xl flex items-center opacity-0 
+                    absolute top-1/2 left-5 transform -translate-y-1/2 text-main bg-white border-main border-solid border 
+                    hover:text-white hover:bg-main justify-center big-button-slider-image item-display -translate-x-16 z-50">
+                    </span>
+                    <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
+                        <div class="border border-solid border-gray_border">
+                            <img src="./images/detail-1.jpeg" class="w-full h-full object-cover item-child-image-product 
+                            opacity-50" alt="" srcset="">
+                        </div>
+                    </li>
+                    <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
+                        <div class="border border-solid border-gray_border">
+                            <img src="./images/detail-2.jpeg" class="w-full h-full object-cover item-child-image-product 
+                            opacity-50" alt="" srcset="">
+                        </div>
+                    </li>
+                    <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
+                        <div class="border border-solid border-gray_border">
+                            <img src="./images/detail-3.jpeg" class="w-full h-full object-cover item-child-image-product 
+                            opacity-50" alt="" srcset="">
+                        </div>
+                    </li>
+                    <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
+                        <div class="border border-solid border-gray_border">
+                            <img src="./images/detail-4.jpeg" class="w-full h-full object-cover item-child-image-product 
+                            opacity-50" alt="" srcset="">
+                        </div>
+                    </li>
+                    <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
+                        <div class="border border-solid border-gray_border">
+                            <img src="./images/detail-3.jpeg" class="w-full h-full object-cover item-child-image-product 
+                            opacity-50" alt="" srcset="">
+                        </div>
+                    </li>
+                    <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
+                        <div class="border border-solid border-gray_border">
+                            <img src="./images/detail-1.jpeg" class="w-full h-full object-cover item-child-image-product 
+                            opacity-50" alt="" srcset="">
+                        </div>
+                    </li>
+                    <span
+                        class="bx bx-chevron-right cursor-pointer w-10 h-10 rounded-full text-2xl flex items-center opacity-0 
+                    absolute top-1/2 right-5 transform -translate-y-1/2 text-main bg-white border-main border-solid border 
+                    hover:text-white hover:bg-main justify-center big-button-slider-image item-display translate-x-16 z-50">
+                    </span>
+                </ul>
+            </div>
+            <div class="mt-5 lg:mt-0 lg:w-5/12">
+                <div class="text-gray_first flex items-center gap-0.5">
+                    <i class='bx bxs-magic-wand'></i> <span class="">New!</span>
+                </div>
+                <p class="font-semibold text-2xl text-lg pt-3 pb-4">Handcrafted Paper Flowers: Pink & Purple Roses (6
+                    Stems)</p>
+                <span class="text-xl block">$10</span>
+                <div class="flex items-center">
+                    <div class="flex items-center gap-0.5 text-xl">
+                        <i class="bx bxs-star text-star"></i>
+                        <i class="bx bxs-star text-star"></i>
+                        <i class="bx bxs-star text-star"></i>
+                        <i class="bx bxs-star text-star"></i>
+                        <i class="bx bxs-star text-star"></i>
+                    </div>
+                    <span class="ml-1 text-gray_first font-400">(6 reviews)</span>
+                </div>
+                <button class="item-bg bg-main py-4 mt-6 block font-bold text-xl text-white w-full rounded-xl">
+                    Add to cart
+                </button>
+                <hr class="border-gray_border mt-5 mb-3">
+                <div id="button-detail-info" class="flex justify-between cursor-pointer">
+                    <span class="font-semibold">Detail</span>
+                    <span class="bx bx-minus text-2xl"></span>
+                </div>
+                <div id="detail-info">
+                    <p class="mt-5">Everlasting, intricate, and one-of-a-kind—make lasting memories with our brand
+                        <span class="font-semibold italic">new</span> Handcrafted Paper
+                        Flowers.
+                    </p>
+                    <p class="mt-6">Perfect for Mother's Day, birthdays, anniversaries, or every day "just because I
+                        love
+                        you" moments,
+                        these beautiful blooms are handcrafted to impress.</p>
+                    <p>Our Handcrafted Paper Flowers will constantly wow and never wilt as no water is needed to
+                        keep
+                        these
+                        allergy-friendly blooms bright. With every petal made by hand from premium paper, each
+                        arrangement
+                        is
+                        unique—just like real roses, but these will last a lifetime.</p>
+                    <p class="font-semibold mt-6">What's included:</p>
+                    <p>6 stemmed paper roses</p>
+                    <p>3 stemmed paper baby's breath</p>
+                    <p>3 paper mint leaf stems</p>
+                    <p>2 paper eucalyptus stems</p>
+                    <p>1 white ribbon to complete the arrangement</p>
+                    <p> 1 beautiful box for shipping</p>
+                    <p> * Vase not included!</p>
+                    <p class="font-semibold mt-6">Dimensions:</p>
+                    <p>Our Handcrafted Paper Flowers are 13 inches in length, with the flower petals being 1.7
+                        inches in
+                        height.</p>
+
+                    <p class="mt-6">Explore our full collection of
+                        <span class="font-semibold underline">Handcrafted Paper Flowers.</span>
+                    </p>
+                </div>
+                <hr class="border-gray_border mb-5 mt-3">
+
+            </div>
+        </section>
+
+        <section class="px-2 container-main wrapper content-margin">
+            <div class="flex items-center gap-8 justify-center mx-auto">
+                <span class="bx bx-chevron-left cursor-pointer w-10 h-10 rounded-full text-2xl hidden lg:flex  
+                justify-center z-10 items-center text-main bg-white border-main border-solid border 
+                hover:text-white hover:bg-main btn-new-release">
+                </span>
+                <div class="flex-1 relative overflow-hidden">
+                    <p class="mb-6 font-bold text-2.5xl text-center">You May Also Like</p>
+                    <div id="slider-new-release" class="slider flex -ml-4 -mr-4">
+                        <a href=""
+                            class="item-product block w-full mx-auto sm:w-1/2 md:w-1/3 px-4 lg:w-1/4 flex-shrink-0">
+                            <div class="w-3/4 mx-auto sm:w-full">
+                                <div class="relative item-hover">
+                                    <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                    <img src="./images/Circle_PostEaster.jpeg"
+                                        class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                        alt="" srcset="">
+                                </div>
+                                <div class="px-5 py-3 border border-solid border-gray-200">
+                                    <div class="text-gray_first flex items-center gap-0.5">
+                                        <i class='bx bxs-magic-wand'></i> <span class="">New!</span>
+                                    </div>
+                                    <p class="font-semibold text-lg">Handcrafted Paper Flowers: Pink & Purple Roses (6
+                                        Stems)</p>
+                                    <span class="text-xl block">$10</span>
+                                    <div class="flex items-center">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="ml-1 text-gray_first font-400">(6 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href=""
+                            class="item-product block w-full mx-auto sm:w-1/2 md:w-1/3 px-4 lg:w-1/4 flex-shrink-0">
+                            <div class="w-3/4 mx-auto sm:w-full">
+                                <div class="relative item-hover">
+                                    <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                    <img src="./images/Circle_PostEaster.jpeg"
+                                        class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                        alt="" srcset="">
+                                </div>
+                                <div class="px-5 py-3 border border-solid border-gray-200">
+                                    <div class="text-gray_first flex items-center gap-0.5">
+                                        <i class='bx bxs-magic-wand'></i> <span class="">New!</span>
+                                    </div>
+                                    <p class="font-semibold text-lg">Handcrafted Paper Flowers: Pink & Purple Roses (6
+                                        Stems)</p>
+                                    <span class="text-xl block">$10</span>
+                                    <div class="flex items-center">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="ml-1 text-gray_first font-400">(6 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href=""
+                            class="item-product block w-full mx-auto sm:w-1/2 md:w-1/3 px-4 lg:w-1/4 flex-shrink-0">
+                            <div class="w-3/4 mx-auto sm:w-full">
+                                <div class="relative item-hover">
+                                    <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                    <img src="./images/Circle_PostEaster.jpeg"
+                                        class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                        alt="" srcset="">
+                                </div>
+                                <div class="px-5 py-3 border border-solid border-gray-200">
+                                    <div class="text-gray_first flex items-center gap-0.5">
+                                        <i class='bx bxs-magic-wand'></i> <span class="">New!</span>
+                                    </div>
+                                    <p class="font-semibold text-lg">Handcrafted Paper Flowers: Pink & Purple Roses (6
+                                        Stems)</p>
+                                    <span class="text-xl block">$10</span>
+                                    <div class="flex items-center">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="ml-1 text-gray_first font-400">(6 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href=""
+                            class="item-product block w-full mx-auto sm:w-1/2 md:w-1/3 px-4 lg:w-1/4 flex-shrink-0">
+                            <div class="w-3/4 mx-auto sm:w-full">
+                                <div class="relative item-hover">
+                                    <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                    <img src="./images/Circle_PostEaster.jpeg"
+                                        class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                        alt="" srcset="">
+                                </div>
+                                <div class="px-5 py-3 border border-solid border-gray-200">
+                                    <div class="text-gray_first flex items-center gap-0.5">
+                                        <i class='bx bxs-magic-wand'></i> <span class="">New!</span>
+                                    </div>
+                                    <p class="font-semibold text-lg">Handcrafted Paper Flowers: Pink & Purple Roses (6
+                                        Stems)</p>
+                                    <span class="text-xl block">$10</span>
+                                    <div class="flex items-center">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="ml-1 text-gray_first font-400">(6 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href=""
+                            class="item-product block w-full mx-auto sm:w-1/2 md:w-1/3 px-4 lg:w-1/4 flex-shrink-0">
+                            <div class="w-3/4 mx-auto sm:w-full">
+                                <div class="relative item-hover">
+                                    <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                    <img src="./images/Circle_PostEaster.jpeg"
+                                        class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                        alt="" srcset="">
+                                </div>
+                                <div class="px-5 py-3 border border-solid border-gray-200">
+                                    <div class="text-gray_first flex items-center gap-0.5">
+                                        <i class='bx bxs-magic-wand'></i> <span class="">New!</span>
+                                    </div>
+                                    <p class="font-semibold text-lg">Handcrafted Paper Flowers: Pink & Purple Roses (6
+                                        Stems)</p>
+                                    <span class="text-xl block">$10</span>
+                                    <div class="flex items-center">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="ml-1 text-gray_first font-400">(6 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href=""
+                            class="item-product block w-full mx-auto sm:w-1/2 md:w-1/3 px-4 lg:w-1/4 flex-shrink-0">
+                            <div class="w-3/4 mx-auto sm:w-full">
+                                <div class="relative item-hover">
+                                    <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                    <img src="./images/Circle_PostEaster.jpeg"
+                                        class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                        alt="" srcset="">
+                                </div>
+                                <div class="px-5 py-3 border border-solid border-gray-200">
+                                    <div class="text-gray_first flex items-center gap-0.5">
+                                        <i class='bx bxs-magic-wand'></i> <span class="">New!</span>
+                                    </div>
+                                    <p class="font-semibold text-lg">Handcrafted Paper Flowers: Pink & Purple Roses (6
+                                        Stems)</p>
+                                    <span class="text-xl block">$10</span>
+                                    <div class="flex items-center">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="ml-1 text-gray_first font-400">(6 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href=""
+                            class="item-product block w-full mx-auto sm:w-1/2 md:w-1/3 px-4 lg:w-1/4 flex-shrink-0">
+                            <div class="w-3/4 mx-auto sm:w-full">
+                                <div class="relative item-hover">
+                                    <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                    <img src="./images/Circle_PostEaster.jpeg"
+                                        class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                        alt="" srcset="">
+                                </div>
+                                <div class="px-5 py-3 border border-solid border-gray-200">
+                                    <div class="text-gray_first flex items-center gap-0.5">
+                                        <i class='bx bxs-magic-wand'></i> <span class="">New!</span>
+                                    </div>
+                                    <p class="font-semibold text-lg">Handcrafted Paper Flowers: Pink & Purple Roses (6
+                                        Stems)</p>
+                                    <span class="text-xl block">$10</span>
+                                    <div class="flex items-center">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="ml-1 text-gray_first font-400">(6 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href=""
+                            class="item-product block w-full mx-auto sm:w-1/2 md:w-1/3 px-4 lg:w-1/4 flex-shrink-0">
+                            <div class="w-3/4 mx-auto sm:w-full">
+                                <div class="relative item-hover">
+                                    <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                    <img src="./images/Circle_PostEaster.jpeg"
+                                        class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                        alt="" srcset="">
+                                </div>
+                                <div class="px-5 py-3 border border-solid border-gray-200">
+                                    <div class="text-gray_first flex items-center gap-0.5">
+                                        <i class='bx bxs-magic-wand'></i> <span class="">New!</span>
+                                    </div>
+                                    <p class="font-semibold text-lg">Handcrafted Paper Flowers: Pink & Purple Roses (6
+                                        Stems)</p>
+                                    <span class="text-xl block">$10</span>
+                                    <div class="flex items-center">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="ml-1 text-gray_first font-400">(6 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href=""
+                            class="item-product block w-full mx-auto sm:w-1/2 md:w-1/3 px-4 lg:w-1/4 flex-shrink-0">
+                            <div class="w-3/4 mx-auto sm:w-full">
+                                <div class="relative item-hover">
+                                    <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                    <img src="./images/Circle_PostEaster.jpeg"
+                                        class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                        alt="" srcset="">
+                                </div>
+                                <div class="px-5 py-3 border border-solid border-gray-200">
+                                    <div class="text-gray_first flex items-center gap-0.5">
+                                        <i class='bx bxs-magic-wand'></i> <span class="">New!</span>
+                                    </div>
+                                    <p class="font-semibold text-lg">Handcrafted Paper Flowers: Pink & Purple Roses (6
+                                        Stems)</p>
+                                    <span class="text-xl block">$10</span>
+                                    <div class="flex items-center">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="ml-1 text-gray_first font-400">(6 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href=""
+                            class="item-product block w-full mx-auto sm:w-1/2 md:w-1/3 px-4 lg:w-1/4 flex-shrink-0">
+                            <div class="w-3/4 mx-auto sm:w-full">
+                                <div class="relative item-hover">
+                                    <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                    <img src="./images/Circle_PostEaster.jpeg"
+                                        class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                        alt="" srcset="">
+                                </div>
+                                <div class="px-5 py-3 border border-solid border-gray-200">
+                                    <div class="text-gray_first flex items-center gap-0.5">
+                                        <i class='bx bxs-magic-wand'></i> <span class="">New!</span>
+                                    </div>
+                                    <p class="font-semibold text-lg">Handcrafted Paper Flowers: Pink & Purple Roses (6
+                                        Stems)</p>
+                                    <span class="text-xl block">$10</span>
+                                    <div class="flex items-center">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="ml-1 text-gray_first font-400">(6 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href=""
+                            class="item-product block w-full mx-auto sm:w-1/2 md:w-1/3 px-4 lg:w-1/4 flex-shrink-0">
+                            <div class="w-3/4 mx-auto sm:w-full">
+                                <div class="relative item-hover">
+                                    <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                    <img src="./images/Circle_PostEaster.jpeg"
+                                        class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                        alt="" srcset="">
+                                </div>
+                                <div class="px-5 py-3 border border-solid border-gray-200">
+                                    <div class="text-gray_first flex items-center gap-0.5">
+                                        <i class='bx bxs-magic-wand'></i> <span class="">New!</span>
+                                    </div>
+                                    <p class="font-semibold text-lg">Handcrafted Paper Flowers: Pink & Purple Roses (6
+                                        Stems)</p>
+                                    <span class="text-xl block">$10</span>
+                                    <div class="flex items-center">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="ml-1 text-gray_first font-400">(6 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href=""
+                            class="item-product block w-full mx-auto sm:w-1/2 md:w-1/3 px-4 lg:w-1/4 flex-shrink-0">
+                            <div class="w-3/4 mx-auto sm:w-full">
+                                <div class="relative item-hover">
+                                    <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                    <img src="./images/Circle_PostEaster.jpeg"
+                                        class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                        alt="" srcset="">
+                                </div>
+                                <div class="px-5 py-3 border border-solid border-gray-200">
+                                    <div class="text-gray_first flex items-center gap-0.5">
+                                        <i class='bx bxs-magic-wand'></i> <span class="">New!</span>
+                                    </div>
+                                    <p class="font-semibold text-lg">Handcrafted Paper Flowers: Pink & Purple Roses (6
+                                        Stems)</p>
+                                    <span class="text-xl block">$10</span>
+                                    <div class="flex items-center">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="ml-1 text-gray_first font-400">(6 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <ul id="slider-new-release-pagination"
+                        class="mx-auto flex pt-8 pb-4 justify-center items-center gap-1">
+                        <li class="bg-gray-400 w-2 h-2 rounded-full cursor-pointer"></li>
+                        <li class="bg-main w-2 h-2 rounded-full cursor-pointer"></li>
+                    </ul>
+                </div>
+                <span class="bx bx-chevron-right cursor-pointer w-10 h-10 rounded-full text-2xl hidden lg:flex  
+                justify-center z-10 items-center text-main bg-white border-main border-solid border 
+                hover:text-white hover:bg-main btn-new-release">
+                </span>
+            </div>
+        </section>
+
+        <section class="wrapper h-40 flex justify-center items-center mb-5" style="background-color: #f2f3f5;">
+            CommentBox
+        </section>
+
+        <footer class="bg-footer px-10 md:px-0 text-white pt-8 pb-6">
+            <div class="wrapper flex flex-col md:flex-row gap-14">
+                <form class="w-full md:w-1/3">
+                    <h2 class="mt-3 mb-2 font-semibold text-xl">Keep me up to date on news and exclusive offers!</h2>
+                    <input type="text" placeholder="Enter your email" class="py-2.5 indent-1 mb-2.5 rounded-md border
+                    border-solid border-gray-200 text-sm focus:border-blue-500 text-black w-full" spellcheck="false">
+                    <button class="px-8 rounded-md text-sm py-2 font-semibold bg-main">Subscribe</button>
+                    <h2 class="mt-3 mb-2 font-semibold text-xl">Follow us!</h2>
+                    <ul class="mt-4 flex gap-3 items-center flex-wrap">
+                        <li class="border-white border-2 border-solid w-9 h-9 rounded-full text-base 
+                        hover:text-white hover:bg-twitter flex justify-center items-center">
+                            <a href="" class="bx bxl-twitter"></a>
+                        </li>
+                        <li class="border-white border-2 border-solid w-9 h-9 rounded-full text-base 
+                        hover:text-white hover:bg-facebook flex justify-center items-center">
+                            <a href="" class="bx bxl-facebook"></a>
+                        </li>
+                        <li class="border-white border-2 border-solid w-9 h-9 rounded-full text-base 
+                        hover:text-white hover:bg-pinterest flex justify-center items-center">
+                            <a href="" class="bx bxl-pinterest"></a>
+                        </li>
+                        <li class="border-white border-2 border-solid w-9 h-9 rounded-full text-base 
+                        hover:text-white hover:bg-instagram flex justify-center items-center">
+                            <a href="" class="bx bxl-instagram"></a>
+                        </li>
+                        <li class="footer-left-end">
+                            <a href="" class="text-xs hover:text-gray-500">#LovepopMoment</a>
+                        </li>
+                    </ul>
+                </form>
+                <div class="w-full md:w-2/3">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/2">
+                            <h2 class="mt-3 mb-2 font-semibold text-xl">About lovepop!</h2>
+                            <ul class="footer-list">
+                                <li><a href="">Find a Retail Location</a></li>
+                                <li><a href="">About Us</a></li>
+                                <li><a href="">Blog</a></li>
+                                <li><a href="">FAQ</a></li>
+                                <li><a href="">We're Hiring</a></li>
+                            </ul>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h2 class="mt-3 mb-2 font-semibold text-xl">Follow us!</h2>
+                            <ul class="footer-list">
+                                <li><a href="tel:888-687-9589">(888) 687-9589 </a></li>
+                                <li><a href="tel:888-687-9589">(M-F 8am - 11pm EST, Sat &amp; Sun 9am-6pm EST)</a></li>
+                                <li><a href="">Contact</a></li>
+                                <li><a href="">Shipping Options</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Terms of Service</a></li>
+                                <li><a href="">Web Accessibility Statement</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <h2 class="mt-3 mb-2 font-semibold text-xl">Work with us</h2>
+                        <ul class="footer-list">
+                            <li><a href="">Wholesale</a></li>
+                            <li><a href="">Corporate Customers</a></li>
+                            <li><a href="">Affiliates</a></li>
+                            <li><a href="">Donation Request Form</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <section id="modal-cart" class="flex-col flex bg-white h-screen fixed top-0 right-0">
+        <div class="flex py-4 px-8 items-center justify-between border-b border-solid border-gray-200">
+            <h2 class="font-700" style="font-size: 1.5rem;">Shopping Cart</h2>
+            <span class="bx bx-x text-2xl cursor-pointer btn-close-modal-cart">&nbsp;</span>
+        </div>
+        <div class="flex-1 overflow-auto max-h-full">
+            <p class="px-9 text-sm py-4 text-gray_first text-center">
+                Unlock $10 pricing on products marked <span class="p-1 bg-gray-300">5 for $50</span> by adding
+                four more products
+                to your cart!
+            </p>
+            <div class="px-8">
+                <ul class="flex items-center gap-0.5">
+                    <li class="bg-green_second py-1.5 rounded-l-xl w-1/5"></li>
+                    <li class="bg-gray-200 py-1.5 w-1/5"></li>
+                    <li class="bg-gray-200 py-1.5 w-1/5"></li>
+                    <li class="bg-gray-200 py-1.5 w-1/5"></li>
+                    <li class="bg-gray-200 py-1.5 rounded-r-xl w-1/5"></li>
+                </ul>
+                <p class="text-center py-1.5"><span>1</span>/5</p>
+            </div>
+            <div class="px-4 mt-1.5">
+                <div class="item-cart-modal p-4">
+                    <div class="flex">
+                        <div class="flex-1">
+                            <p class="text-xl font-300">Easter Truck Pop-Up Card</p>
+                            <div class="flex items-center"><span class="text-xl mr-2 font-600">$13</span><span
+                                    class="inline p-1 bg-gray-300">5 for
+                                    $50</span></div>
+                        </div>
+                        <img src="./images/item-cart-png.jpeg" class="object-cover border-gray_border 
+                        border-solid border rounded-md" width="89" height="89" alt="">
+                    </div>
+                    <div class="bg-gray_bg py-1 mt-3 border-gray_border border-solid border">
+                        <div
+                            class="max-w-20 w-20 h-8 flex items-center mx-auto justify-around rounded-full border-main border-solid border-2">
+                            <span class="bx bx-trash-alt text-xl item-text cursor-pointer"></span>
+                            <span class="font-bold">1</span>
+                            <span class="bx bx-plus text-xl item-text cursor-pointer"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 mb-4">
+                <p class="text-2.5xl font-bold text-center">You May Also Like</p>
+                <div class="w-full mt-9 relative px-1 flex justify-center items-center">
+                    <span class="bx bx-chevron-left cursor-pointer w-10 h-10 rounded-full text-2xl hidden lg:flex  
+                    justify-center z-10 items-center text-main bg-white border-main border-solid border 
+                    hover:text-white hover:bg-main btn-new-release">
+                    </span>
+                    <div class="slider mx-auto flex gap-2" style="width: calc(100% - 90px);">
+                        <a href="" class="item-product block w-1/2 mx-auto">
+                            <div class="w-3/4 mx-auto sm:w-full">
+                                <div class="relative item-hover">
+                                    <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                </div>
+                                <div class="px-5 py-3 border border-solid border-gray-200">
+                                    <div class="text-gray_first flex items-center gap-0.5">
+                                        <i class='bx bxs-magic-wand'></i> <span class="">New!</span>
+                                    </div>
+                                    <p class="font-semibold text-lg">Handcrafted Paper Flowers: Pink & Purple Roses
+                                        (6
+                                        Stems)</p>
+                                    <span class="text-xl block">$10</span>
+                                    <div class="flex items-center flex-col">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="ml-1 text-gray_first font-400">(6 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="item-product block w-1/2 mx-auto">
+                            <div class="w-3/4 mx-auto sm:w-full">
+                                <div class="relative item-hover">
+                                    <img src="./images/Circle_PostEaster.jpeg" alt="" srcset="">
+                                </div>
+                                <div class="px-5 py-3 border border-solid border-gray-200">
+                                    <div class="text-gray_first flex items-center gap-0.5">
+                                        <i class='bx bxs-magic-wand'></i> <span class="">New!</span>
+                                    </div>
+                                    <p class="font-semibold text-lg">Handcrafted Paper Flowers: Pink & Purple Roses
+                                        (6
+                                        Stems)</p>
+                                    <span class="text-xl block">$10</span>
+                                    <div class="flex items-center flex-col">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="ml-1 text-gray_first font-400">(6 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <span class="bx bx-chevron-right cursor-pointer w-10 h-10 rounded-full text-2xl hidden lg:flex  
+                    justify-center z-10 items-center text-main bg-white border-main border-solid border 
+                    hover:text-white hover:bg-main btn-new-release">
+                    </span>
+                </div>
+                <ul id="product-pagination" class="mx-auto flex pt-8 pb-4 justify-center items-center gap-1">
+                    <li class="bg-gray-400 w-2 h-2 rounded-full cursor-pointer"></li>
+                    <li class="bg-main w-2 h-2 rounded-full cursor-pointer"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex px-3 items-center py-2">
+            <div class="text-cente px-2">
+                <p class="text-sm mb-0.5">SubTotal</p>
+                <p class="font-semibold">$13.00</p>
+            </div>
+            <button class="flex-1 py-3 rounded-md text-xl item-bg bg-main text-white font-semibold">
+                Checkout (1 item)
+            </button>
+        </div>
+    </section>
+
+    <section class="fixed top-0 right-0 h-screen overflow-auto" id="modal-cart"></section>
+
+    <div id="modal" class="bg-black fixed top-0 left-0 bottom-0 right-0 z-50 bg-opacity-80" style="z-index: 9999;">
+    </div>
+
+    <script src="./js/var.js"></script>
+    <script src="./js/function.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/detail-product.js"></script>
+
+</body>
+
+</html>

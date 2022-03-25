@@ -8,22 +8,12 @@
     margin: auto;
 }
 
-@media (min-width: 576px) {
-    .wrapper {
-        max-width: 540px;
-        margin: auto;
-    }
-}
-
-@media (min-width: 576px) {
-    .wrapper {
-        max-width: 540px;
-        margin: auto;
-    }
-}
-
 @media (min-width: 768px) {
     .wrapper {
+        max-width: 720px;
+        margin: auto;
+    }
+    .content-wrapper {
         max-width: 720px;
         margin: auto;
     }
@@ -45,22 +35,37 @@
     }
 }
 
+@media (max-width: 1024px) {
+    #slider-magical-moment {
+        overflow: hidden;
+    }
+}
 
 @media (min-width: 1024px) {
     .wrapper {
         max-width: 976px;
         margin: auto;
     }
-    .item-near-footer {
+    /* .item-near-footer {
         max-width: 582px !important;
+    } */
+    .item-near-footer {
+        max-width: 50%;
+    }
+    .item-near-footer div:first-child {
+        max-width: calc(100% - 6.6875rem) !important;
     }
     .image-near-footer {
-        width: 13.375rem;
-        height: 13.375rem;
-        margin-left: -6.6875rem;
+        width: 13.375rem !important;
+        height: 13.375rem !important;
+        margin-left: -6.6875rem !important;
     }
     .image-near-footer-child {
         margin-top: 0 !important;
+    }
+    .content-wrapper {
+        max-width: 976px;
+        margin: auto;
     }
 }
 
@@ -69,24 +74,22 @@
         max-width: 864px;
         margin: auto;
     }
-    .ul-header-hover .item-menu-hide {
-        display: flex !important;
+    .content-wrapper {
+        max-width: 864px;
+        margin: auto;
     }
 }
-
 
 @media (min-width: 992px) {
     .wrapper {
         max-width: 968px;
         margin: auto;
     }
-}
-
-@media (min-width: 1024px) {
-    .wrapper {
+    .content-wrapper {
         max-width: 968px;
         margin: auto;
     }
+
 }
 
 
@@ -98,10 +101,21 @@
     .ul-header-hover .item-menu-hide {
         display: flex !important;
     }
+    .content-wrapper {
+        max-width: 1092px;
+        margin: auto;
+    }
 }
 
 @media (min-width: 1200px) {
     .wrapper {
+        max-width: 1140px;
+        margin: auto;
+    }
+    .ul-header-hover .item-menu-hide {
+        display: flex !important;
+    }
+    .content-wrapper {
         max-width: 1140px;
         margin: auto;
     }
@@ -112,11 +126,19 @@
         max-width: 1280px;
         margin: auto;
     }
+    .content-wrapper {
+        max-width: 1140px;
+        margin: auto;
+    }
 }
 
 @media (min-width: 1500px) {
     .wrapper {
         max-width: 1440px;
+        margin: auto;
+    }
+    .content-wrapper {
+        max-width: 1140px;
         margin: auto;
     }
 }

@@ -1,13 +1,3 @@
-const listItemMenu = document.getElementsByClassName('item-menu');
-const frontMenuActive = document.getElementById('front-menu-active');
-const btnOpenMenuMobie = document.getElementById('btn-menu-mobile');
-const menuMain = document.getElementById('menu-main');
-const btnCloseMenuMobile = document.getElementsByClassName('btn-close-menu-mobile');
-const modal = document.getElementById('modal');
-const subMenuMobile = document.getElementById('sub-menu-mobile');
-const subMenuMobileDisplay = document.getElementById('sub-menu-display-mobile');
-const returnMenuMain = document.getElementById('return-menu-main');
-const labelSubMenuDisplay = document.getElementById('label-sub-menu-display');
 
 let isClick;
 let indexClick;
@@ -64,17 +54,16 @@ let statusClickMenu;
 
 const menuStatus = () => {
     if (!statusClickMenu) {
-        menuMain.classList.add('menu-mobile', 'transition-menu-mobile');
-        subMenuMobile.classList.add('menu-mobile', 'transition-menu-mobile');
+        menuMain.classList.add('menu-mobile', 'transition-menu-mobile', 'transition-menu');
+        subMenuMobile.classList.add('menu-mobile', 'transition-menu-mobile', 'transition-menu');
         menuMain.classList.add('transition-menu-mobile-active');
         modal.classList.add('modal-active');
         document.body.classList = 'fixed top-0 left-0 right-0 bottom-0';
+        modal.addEventListener('click', clickOutSide)
     }
     else {
-        subMenuMobile.classList.remove('menu-mobile-main', 'transition-menu-mobile-active');
-        menuMain.classList.remove('transition-menu-mobile-active');
-        modal.classList.remove('modal-active');
-        document.body.classList = '';
+        clickOutSide();
+        modal.removeEventListener('click', clickOutSide)
     }
     statusClickMenu = !statusClickMenu;
 }
@@ -88,17 +77,28 @@ returnMenuMain.addEventListener('click', () => {
     subMenuMobile.classList.remove('menu-mobile-main', 'transition-menu-mobile-active');
 });
 
+
 const resizeEvent = () => {
+    generatePagination(sliderNewRelease, sliderNewReleasePagination, numberResizeNewRelease);
+    generatePagination(sliderMagicalMoment, sliderMagicalMomentPagination, numberResizeMagicalMoment);
     if (window.innerWidth < 1024) {
+        document.body.classList = 'preload';
         menuMain.classList.add('menu-mobile', 'transition-menu-mobile');
-        subMenuMobile.classList.add('menu-mobile', 'transition-menu-mobile', 'menu-mobile-main',);
+        subMenuMobile.classList.add('menu-mobile', 'transition-menu-mobile', 'menu-mobile-main');
     }
     else {
-        menuMain.classList.remove('menu-mobile', 'transition-menu-mobile');
-        subMenuMobile.classList.remove('menu-mobile', 'transition-menu-mobile', 'menu-mobile-main');
+        sliderMagicalMoment && (sliderMagicalMoment.style.transform = 'translate(0%)')
+        modal.classList.remove('modal-active');
+        subMenuMobileDisplay.innerHTML = '';
+        menuMain.classList.remove('menu-mobile', 'transition-menu-mobile', 'transition-menu-mobile-active', 'transition-menu');
+        subMenuMobile.classList.remove('menu-mobile', 'transition-menu-mobile', 'transition-menu-mobile-active',
+            'menu-mobile-main', 'transition-menu');
     }
 }
 
 window.addEventListener('resize', resizeEvent);
 
 resizeEvent();
+
+
+

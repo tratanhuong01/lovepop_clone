@@ -14,11 +14,19 @@
     transition: all .3s;
 }
 
+.slider {
+    transition: transform 0.5s;
+    transform: translateX(0%);
+}
+
 .rotate-nav-icon {
     transform: rotate(0deg);
     transition: transform .3s;
 }
 
+.item-near-footer div:first-child {
+    max-width: 315px;
+}
 
 .item-image-round img {
     transition: transform 1s;
@@ -40,10 +48,6 @@
 
 .image-near-footer-child {
     margin-top: -4.90625rem;
-}
-
-.item-near-footer {
-    max-width: 315px;
 }
 
 .content-main {

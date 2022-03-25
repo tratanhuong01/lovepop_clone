@@ -106,11 +106,14 @@
     justify-content: space-between;
 }
 
+.transition-menu {
+    transition: all .5s !important;
+}
+
 .transition-menu-mobile {
     opacity: 0;
     visibility: hidden;
     transform: translateX(-100%);
-    transition: all .3s;
 }
 
 .transition-menu-mobile-active {
@@ -122,11 +125,10 @@
 #modal {
     opacity: 0;
     visibility: hidden;
-    transition: all .3s;
+    transition: all .5s;
 }
 
 .modal-active {
     opacity: 1 !important;
     visibility: visible !important;
-    transition: all .3s !important;
 }

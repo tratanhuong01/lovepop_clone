@@ -1,0 +1,24 @@
+.item-child-image-product:hover {
+    opacity: 1;
+    transition: all .3s;
+    transform: translateY(-8px);
+}
+
+.item-parent-image-product {
+    width: 25%;
+    padding: 0rem 1rem;
+}
+
+/* .big-button-slider-image {
+    transition: all .5s;
+    transform: translateX(0%);
+} */
+
+.item-hover:hover .big-button-slider-image {
+    transition: all .5s;
+    transform: translate(0%,-50%);
+}
+
+#detail-info {
+    transition: all .3s;
+}
