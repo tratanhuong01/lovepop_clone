@@ -75,29 +75,32 @@ const generatePaginationMagicalMoment = () => {
 // magical moment
 
 //new release
-const numberResizeNewRelease = () => {
-    if (window.innerWidth < 640) return 1;
+const numberResizeNewRelease = (isBlog) => {
+    if (window.innerWidth < 640) return isBlog ? 2 : 1;
     else if (window.innerWidth >= 640 && window.innerWidth < 768) return 2;
     else if (window.innerWidth >= 768 && window.innerWidth < 1024) return 3;
     else if (window.innerWidth >= 1024) return 4;
 }
-const hanleSliderNewRelease = () => {
-    generatePaginationNewRelease();
-    let listItemNewReleaseMain = document.getElementsByClassName('item-new-release-main');
-    [...listItemNewReleaseMain].forEach((el, index) => {
-        el.addEventListener('click', () => {
-            sliderNewRelease.style.transform = `translateX(-${index * 100}%)`
-            indexCurrentNewRelease.value = index;
-            generatePaginationNewRelease();
-            hanleSliderNewRelease();
+const hanleSliderNewRelease = (isBlog) => {
+    if (sliderNewRelease) {
+        sliderNewRelease.style.transform = `translateX(0%)`;
+        generatePaginationNewRelease(isBlog);
+        let listItemNewReleaseMain = document.getElementsByClassName('item-new-release-main');
+        [...listItemNewReleaseMain].forEach((el, index) => {
+            el.addEventListener('click', () => {
+                sliderNewRelease.style.transform = `translateX(-${index * 100}%)`
+                indexCurrentNewRelease.value = index;
+                generatePaginationNewRelease();
+                hanleSliderNewRelease();
+            })
         })
-    })
+    }
 }
-const generatePaginationNewRelease = () => {
+const generatePaginationNewRelease = (isBlog) => {
     if (!sliderNewRelease || !sliderNewReleasePagination) return;
     let length = sliderNewRelease.children.length;
     let arr = [];
-    for (let index = 0; index < Math.floor(length / numberResizeNewRelease()); index++) {
+    for (let index = 0; index < Math.floor(length / numberResizeNewRelease(isBlog)); index++) {
         arr.push(index);
     }
     sliderNewReleasePagination.innerHTML = arr.map((item, index) =>

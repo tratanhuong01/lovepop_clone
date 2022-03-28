@@ -31,7 +31,7 @@ const removeItemCart = (id) => {
 }
 
 const loadContentRightCart = () => {
-    if (lengthCart) {
+    if (lengthCart && numberProcessCurrent) {
         let length = Number(lengthCart.value);
         numberProcessCurrent.innerHTML = length;
         let arr = [];

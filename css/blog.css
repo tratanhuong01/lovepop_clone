@@ -1,0 +1,22 @@
+.size-pagination {
+    width: 35px;
+    height: 35px;
+}
+
+.background-pagination {
+    background-color: #627f9a;
+    color: white !important;
+}
+
+.border-pagination {
+    border-color: #627f9a;
+}
+
+.color-pagination {
+    color: #627f9a;
+}
+
+.item-slider-detail-blog:hover .item-slider-detail-blog-child {
+    opacity: 1;
+    transform: translateX(0%);
+}

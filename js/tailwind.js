@@ -18,7 +18,8 @@ tailwind.config = {
                 instagram: '#833ab4',
                 green: '#2a522e',
                 green_second: '#5BBA47',
-                input_focus: '#0379b0'
+                input_focus: '#0379b0',
+                black_blur: '#333'
             },
         }
     }

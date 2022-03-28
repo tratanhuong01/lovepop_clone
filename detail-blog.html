@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/tailwind_custom.css">
     <link rel="stylesheet" href="./css/cart.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/blog.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/footer.css">
 
@@ -300,212 +300,303 @@
             class="z-30 invisible bg-black bg-opacity-50 absolute top-0 left-0 right-0 bottom-0">
         </div>
 
-        <section class="wrapper px-5">
-            <ul class="pt-8 pb-12 flex gap-6 text-sm">
-                <li><a href="">Home</a></li>
-                <li><a href="" class="font-semibold">Your Shopping Cart</a></li>
+        <section class="w-full">
+            <ul class="pt-8 flex-wrap pl-4 pb-12 flex gap-1 items-center text-sm">
+                <li><a href="" class="item-text">Home</a></li>
+                <li><span class="bx bx-chevron-right text-xl"></span></li>
+                <li><a href="" class="item-text">The Lovepop Journal</a></li>
+                <li><span class="bx bx-chevron-right text-xl"></span></li>
+                <li><a href="" class="font-semibold">What to Say to Your Grandpa on Father's Day</a></li>
             </ul>
-            <div class="flex gap-12 flex-col lg:flex-row">
-                <div class="w-full lg:w-2/3">
-                    <p class="block lg:hidden text-sm pt-4 text-gray_first text-center">
-                        Unlock $10 pricing on products marked <span class="p-1 bg-gray-300">5 for $50</span> by adding
-                        four more products
-                        to your cart!
-                    </p>
-                    <p id="shop-collection-cart" class="hidden lg:hidden text-center"><span class="font-bold hover:text-main cursor-pointer border-b-2 border-solid border-main 
-                        text-xs">Shop Collection</span></p>
-                    <div class="block lg:hidden">
-                        <ul class=" flex items-center gap-0.5 mt-3" id="process-bar-cart-big">
-                            <li class="bg-green_second py-1.5 rounded-l-xl w-1/5"></li>
-                            <li class="bg-gray-200 py-1.5 w-1/5"></li>
-                            <li class="bg-gray-200 py-1.5 w-1/5"></li>
-                            <li class="bg-gray-200 py-1.5 w-1/5"></li>
-                            <li class="bg-gray-200 py-1.5 rounded-r-xl w-1/5"></li>
-                        </ul>
-                        <p class="text-center py-1.5"><span id="number-process-current">1</span>/5</p>
-                    </div>
-                    <div class="py-20 hidden no-cart-item">
-                        <p class="text-gray_first text-center mb-3">Plenty of room for magical moments— fill it up!</p>
-                        <div class="w-16 h-16 logo-svg-gray mx-auto cover bg-no-repeat"></div>
-                    </div>
-                    <table class="table-cart">
-                        <tbody id="table-cart-main">
-                            <tr class="hidden lg:contents border-b border-solid border-gray_border">
-                                <th>Product</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                            </tr>
-                            <tr id="item-cart-1" class="border-b border-solid border-gray_border">
-                                <td>
-                                    <div class="flex gap-5">
-                                        <img src="./images/Circle_PostEaster.jpeg" class="w-28 h-28 border border-solid 
-                                        border-gray_border" alt="">
-                                        <div class="flex-1">
-                                            <p class="font-semibold">Birthday Party in Present City Countdown Adventure
-                                                Box
-                                            </p>
-                                            <p class="flex items-center gap-2 mt-1 text-main font-semibold">
-                                                <span class="bx bx-pencil text-2xl"></span>
-                                                <span class="text-sm">Personalize this Lovepop (+$5)</span>
-                                            </p>
-                                            <div class="mt-7 hidden lg:block">
-                                                <span class="p-1.5 bg-gray-200 mt-12">5 for $50</span>
-                                            </div>
-                                            <div class="flex my-3 lg:hidden justify-between w-full items-center">
-                                                <div class="max-w-20 w-20 h-8 flex items-center justify-around rounded-full 
-                                                    border-main border-solid border-2" id="amount-cart-1">
-                                                    <span onclick="handleAmount(1,0)"
-                                                        class="bx bx-trash-alt text-xl item-text cursor-pointer"></span>
-                                                    <span class="font-bold">1</span>
-                                                    <span onclick="handleAmount(1,1)"
-                                                        class="bx bx-plus text-xl item-text cursor-pointer"></span>
-                                                </div>
-                                                <span class="p-1.5 bg-gray-200">5 for $50</span>
-                                                <span onclick="removeItemCart(1)" class="font-bold hover:text-main cursor-pointer border-b-2 border-solid border-main 
-                                                text-xs">Remove</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="w-36 items-start hidden lg:flex">
-                                    <div class="flex items-center gap-3">
-                                        <span class="font-semibold">$35</span>
-                                        <div class="relative item-tr-popup-table-cart">
-                                            <i class='bx bxs-error-circle text-gray_border_bold text-xl'></i>
-                                            <div class="tr-popup-table-cart">
-                                                <span class="py-5">
-                                                    This item is not eligible for price discounts</span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </td>
-                                <td style="vertical-align: top;" class="w-36 hidden lg:table-cell">
-                                    <div class="flex items-center gap-3">
-                                        <div class="max-w-20 w-20 h-8 flex items-center mx-auto justify-around rounded-full 
-                                            border-main border-solid border-2" id="amount-cart-1">
-                                            <span onclick="handleAmount(1,0)"
-                                                class="bx bx-trash-alt text-xl item-text cursor-pointer"></span>
-                                            <span class="font-bold">1</span>
-                                            <span onclick="handleAmount(1,1)"
-                                                class="bx bx-plus text-xl item-text cursor-pointer"></span>
-                                        </div>
-                                        <div>
-                                            <span onclick="removeItemCart(1)" class="font-bold hover:text-main cursor-pointer border-b-2 border-solid border-main 
-                                            text-xs">Remove</span>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr id="item-cart-2" class="border-b border-solid border-gray_border">
-                                <td>
-                                    <div class="flex gap-5">
-                                        <img src="./images/Circle_PostEaster.jpeg" class="w-28 h-28 border border-solid 
-                                        border-gray_border" alt="">
-                                        <div class="flex-1">
-                                            <p class="font-semibold">Birthday Party in Present City Countdown Adventure
-                                                Box
-                                            </p>
-                                            <p class="flex items-center gap-2 mt-1 text-main font-semibold">
-                                                <span class="bx bx-pencil text-2xl"></span>
-                                                <span class="text-sm">Personalize this Lovepop (+$5)</span>
-                                            </p>
-                                            <div class="mt-7 hidden lg:block">
-                                                <span class="p-1.5 bg-gray-200 mt-12">5 for $50</span>
-                                            </div>
-                                            <div class="flex my-3 lg:hidden justify-between w-full items-center">
-                                                <div class="max-w-20 w-20 h-8 flex items-center justify-around rounded-full 
-                                                    border-main border-solid border-2" id="amount-cart-1">
-                                                    <span onclick="handleAmount(1,0)"
-                                                        class="bx bx-trash-alt text-xl item-text cursor-pointer"></span>
-                                                    <span class="font-bold">1</span>
-                                                    <span onclick="handleAmount(1,1)"
-                                                        class="bx bx-plus text-xl item-text cursor-pointer"></span>
-                                                </div>
-                                                <span class="p-1.5 bg-gray-200">5 for $50</span>
-                                                <span onclick="removeItemCart(1)" class="font-bold hover:text-main cursor-pointer border-b-2 border-solid border-main 
-                                                text-xs">Remove</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="w-36 items-start hidden lg:flex">
-                                    <div class="flex items-center gap-3">
-                                        <span class="font-semibold">$35</span>
-                                        <div class="relative item-tr-popup-table-cart">
-                                            <i class='bx bxs-error-circle text-gray_border_bold text-xl'></i>
-                                            <div class="tr-popup-table-cart">
-                                                <span class="py-5">
-                                                    This item is not eligible for price discounts</span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </td>
-                                <td style="vertical-align: top;" class="w-36 hidden lg:table-cell">
-                                    <div class="flex items-center gap-3">
-                                        <div class="max-w-20 w-20 h-8 flex items-center mx-auto justify-around rounded-full 
-                                            border-main border-solid border-2" id="amount-cart-1">
-                                            <span onclick="handleAmount(2,0)"
-                                                class="bx bx-trash-alt text-xl item-text cursor-pointer"></span>
-                                            <span class="font-bold">1</span>
-                                            <span onclick="handleAmount(2,1)"
-                                                class="bx bx-plus text-xl item-text cursor-pointer"></span>
-                                        </div>
-                                        <div>
-                                            <span onclick="removeItemCart(2)" class="font-bold hover:text-main cursor-pointer border-b-2 border-solid border-main 
-                                            text-xs">Remove</span>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="w-full lg:w-1/3">
-                    <p class="font-semibold hidden lg:block">Cart Totals</p>
-                    <p class="hidden lg:block text-sm pt-4 text-gray_first text-center">
-                        Unlock $10 pricing on products marked <span class="p-1 bg-gray-300">5 for $50</span> by adding
-                        four more products
-                        to your cart!
-                    </p>
-                    <p id="shop-collection-cart" class="hidden lg:block text-center"><span class="font-bold hover:text-main cursor-pointer border-b-2 border-solid border-main 
-                        text-xs">Shop Collection</span></p>
-                    <div class="hidden lg:block">
-                        <ul class=" flex items-center gap-0.5 mt-3" id="process-bar-cart-big">
-                            <li class="bg-green_second py-1.5 rounded-l-xl w-1/5"></li>
-                            <li class="bg-gray-200 py-1.5 w-1/5"></li>
-                            <li class="bg-gray-200 py-1.5 w-1/5"></li>
-                            <li class="bg-gray-200 py-1.5 w-1/5"></li>
-                            <li class="bg-gray-200 py-1.5 rounded-r-xl w-1/5"></li>
-                        </ul>
-                        <p class="text-center py-1.5"><span id="number-process-current">1</span>/5</p>
-                    </div>
-                    <div class="flex flex-col gap-5 mx-auto no-cart-item pb-20 hidden" style="width: 240px;">
-                        <p class="text-xl text-center mt-4 mb-3">Featured Collections</p>
-                        <button class="border-2 rounded-xl text-sm hover:text-white font-semibold border-solid border-main 
-                        transition-3s hover:bg-main py-3 mb-3 px-10 w-full block">
-                            Shop 5 for $50
-                        </button>
-                        <button class="border-2 rounded-xl text-sm hover:text-white font-semibold border-solid border-main 
-                        transition-3s hover:bg-main py-3 mb-3 px-10 w-full block">
-                            Shop New Releases
-                        </button>
-                        <button class="border-2 rounded-xl text-sm hover:text-white font-semibold border-solid border-main 
-                        transition-3s hover:bg-main py-3 mb-3 px-10 w-full block">
-                            Shop Best Sellers
-                        </button>
-                    </div>
-                    <div class="pb-12">
-                        <div class="flex items-center justify-between pb-7">
-                            <p class="text-sm mb-0.5">SubTotal: </p>
-                            <p class="font-semibold">$13.00</p>
+            <div class="flex gap-8 pb-10 px-2">
+                <div class="w-full md:w-3/4 pl-0 md:pl-5">
+                    <div class="text-center">
+                        <h1 class="text-xl md:text-2.5xl font-semibold">What to Say to Your Grandpa on Father's Day
+                        </h1>
+                        <div class="h-0.5 w-8 mt-10 md:mt-7 mb-5 bg-gray_border_bold opacity-50 mx-auto">
                         </div>
-                        <button
-                            class="flex-1 block w-full py-3 rounded-md text-xl item-bg bg-main text-white font-semibold">
-                            Checkout (1 item)
-                        </button>
+                        <p class="text-black_blur">Posted by <span class="font-semibold">Lovepop Team</span> on March
+                            25, 2022</p>
                     </div>
+                    <div class="mt-5 text-black_blur">
+                        <p class="mb-4">Father’s Day is sneaking up on us quickly. If you don’t know what to get
+                            grandpa, or just
+                            need to add the perfect touch to your already amazing gift, you can never go wrong with a
+                            thoughtfully written greeting card.</p>
+                        <p>Picking out one of our personalized greeting is the easy part. Sometimes writing how much
+                            someone means to us is the most difficult part.</p>
+                        <p class="mb-4">Below is a list of 15 meaningful Father’s Day messages for Grandfathers to help
+                            you compose the perfect card.</p>
+
+                        <div class="mb-4 text-center">
+                            <img src="./images/RGB-LP3065_The_Best_Grandpa_480x480.webp" class="inline" alt=""
+                                srcset="">
+                        </div>
+                        <ol class="text-black_blur">
+                            <li class="mb-4">Grandpa, when I think of you, I think of sharing popsicles on the porch,
+                                big bear hugs, and the unconditional love you have shown me through the years. Enjoy
+                                your special day, I love you!</li>
+                            <li class="mb-4">You taught me how to change the oil on a car and how to be a friend, but
+                                most importantly you were the best friend to me growing up. I love you Grandpa! Happy
+                                Father’s Day.
+                            </li>
+                            <li class="mb-4">Grandpas are full of great advice. No matter the advice, Grandpa, you have
+                                always looked out for my best interest and I am forever grateful. Have a great day, you
+                                deserve it!
+                            </li>
+                            <li class="mb-4">Only the best fathers get promoted to GRANDfather. You are Grand and we
+                                love you!</li>
+                            <li class="mb-4">I thought I was lucky getting to have you as a father. Having my children
+                                look up to a role model like you is priceless. Happy Father’s Day, dad!
+                            </li>
+                            <li class="mb-4">Grandpas make the world a little kinder, a little softer, and a whole lot
+                                more fun! Enjoy your special day!</li>
+                            <li class="mb-4">Grandpas have the wisdom of many years, and the tenderness of a loving
+                                heart. We love you Grandpa!</li>
+                            <li class="mb-4">Grandpa, you have a love that is never ending, arms that are never empty,
+                                and a heart that is always full. Have a wonderful day! We love you.
+                            </li>
+                            <li class="mb-4">Grandpas' hearts are made of gold, hands are made of steel and hugs can
+                                cure any worry. Thank you for always being there for me, Grandpa!
+                            </li>
+                            <li class="mb-4">From soccer games in the rain, to ballet for hours, Grandpa you have always
+                                been so supportive, which means the world to us. Thank you and we hope you have a great
+                                Father’s Day.</li>
+                            <li class="mb-4">Grandpa, your love is like you, it never goes out of style. Happy Father’s
+                                Day.</li>
+                            <li class="mb-4">Strong roots make beautiful leaves. Thank you Grandpa for adding so much
+                                love to our Family Tree.</li>
+                            <li class="mb-4">Full of wisdom and charm, thank you for being the best Grandpa I could wish
+                                for.</li>
+                            <li class="mb-4">Just one more cookie, Grandpa? Just one more ride, Grandpa? Thanks for
+                                always letting me have that ONE more special moment with you. Happy Father’s Day,
+                                Grandpa!</li>
+                            <li class="mb-4">We hope you have a BEARY good Father’s Day Grandpa! We love you.</li>
+                        </ol>
+                        <p class="text-center my-14">
+                            Still stuck? We've got even more <span class="underline color-form">Father’s Day messages
+                                here</span> and an awesome collection of
+                            pop-up cards to choose from.
+                        </p>
+
+                        <button class="w-60 py-3 rounded-xl mx-auto block text-white bg-main font-semibold">
+                            Shop Father's Day Cards
+                        </button>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                    <section class="-ml-2 mb-12">
+                        <div class="flex items-center gap-8 justify-center mx-auto">
+                            <div class="w-full item-slider-detail-blog relative overflow-hidden">
+                                <div class="z-50 item-slider-detail-blog-child absolute top-1/2 w-16 flex items-center justify-center left-0 right-0 bottom-0 
+                                    top-0 bg-white bg-opacity-50 transition-3s opacity-0 transform -translate-x-full">
+                                    <span class="bx transition-3s bx-chevron-left cursor-pointer w-10 h-10 rounded-full text-2xl flex  
+                                    justify-center z-10 items-center text-main bg-white border-main border-solid border 
+                                    hover:text-white hover:bg-main btn-new-release">
+                                    </span>
+                                </div>
+                                <div id="slider-new-release" class="slider w-full transition-5s flex">
+                                    <a href="" class="item-product block w-1/2 md:w-1/3 px-2 lg:w-1/4 flex-shrink-0">
+                                        <div class="w-full">
+                                            <div class="relative item-hover">
+                                                <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                                <img src="./images/Circle_PostEaster.jpeg"
+                                                    class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                                    alt="" srcset="">
+                                            </div>
+                                            <div class="px-5 py-3 border border-solid border-gray-200">
+                                                <p class="font-semibold item-text">Handcrafted Paper Flowers</p>
+                                                <span class="text-xl block">$10</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item-product block w-1/2 md:w-1/3 px-2 lg:w-1/4 flex-shrink-0">
+                                        <div class="w-full">
+                                            <div class="relative item-hover">
+                                                <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                                <img src="./images/Circle_PostEaster.jpeg"
+                                                    class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                                    alt="" srcset="">
+                                            </div>
+                                            <div class="px-5 py-3 border border-solid border-gray-200">
+                                                <p class="font-semibold item-text">Handcrafted Paper Flowers</p>
+                                                <span class="text-xl block">$10</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item-product block w-1/2 md:w-1/3 px-2 lg:w-1/4 flex-shrink-0">
+                                        <div class="w-full">
+                                            <div class="relative item-hover">
+                                                <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                                <img src="./images/Circle_PostEaster.jpeg"
+                                                    class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                                    alt="" srcset="">
+                                            </div>
+                                            <div class="px-5 py-3 border border-solid border-gray-200">
+                                                <p class="font-semibold item-text">Handcrafted Paper Flowers</p>
+                                                <span class="text-xl block">$10</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item-product block w-1/2 md:w-1/3 px-2 lg:w-1/4 flex-shrink-0">
+                                        <div class="w-full">
+                                            <div class="relative item-hover">
+                                                <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                                <img src="./images/Circle_PostEaster.jpeg"
+                                                    class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                                    alt="" srcset="">
+                                            </div>
+                                            <div class="px-5 py-3 border border-solid border-gray-200">
+                                                <p class="font-semibold item-text">Handcrafted Paper Flowers</p>
+                                                <span class="text-xl block">$10</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item-product block w-1/2 md:w-1/3 px-2 lg:w-1/4 flex-shrink-0">
+                                        <div class="w-full">
+                                            <div class="relative item-hover">
+                                                <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                                <img src="./images/Circle_PostEaster.jpeg"
+                                                    class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                                    alt="" srcset="">
+                                            </div>
+                                            <div class="px-5 py-3 border border-solid border-gray-200">
+                                                <p class="font-semibold item-text">Handcrafted Paper Flowers</p>
+                                                <span class="text-xl block">$10</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item-product block w-1/2 md:w-1/3 px-2 lg:w-1/4 flex-shrink-0">
+                                        <div class="w-full">
+                                            <div class="relative item-hover">
+                                                <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                                <img src="./images/Circle_PostEaster.jpeg"
+                                                    class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                                    alt="" srcset="">
+                                            </div>
+                                            <div class="px-5 py-3 border border-solid border-gray-200">
+                                                <p class="font-semibold item-text">Handcrafted Paper Flowers</p>
+                                                <span class="text-xl block">$10</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item-product block w-1/2 md:w-1/3 px-2 lg:w-1/4 flex-shrink-0">
+                                        <div class="w-full">
+                                            <div class="relative item-hover">
+                                                <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                                <img src="./images/Circle_PostEaster.jpeg"
+                                                    class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                                    alt="" srcset="">
+                                            </div>
+                                            <div class="px-5 py-3 border border-solid border-gray-200">
+                                                <p class="font-semibold item-text">Handcrafted Paper Flowers</p>
+                                                <span class="text-xl block">$10</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item-product block w-1/2 md:w-1/3 px-2 lg:w-1/4 flex-shrink-0">
+                                        <div class="w-full">
+                                            <div class="relative item-hover">
+                                                <img src="./images/anniversary.jpeg" alt="" srcset="">
+                                                <img src="./images/Circle_PostEaster.jpeg"
+                                                    class="item-image item-display opacity-0 visible absolute top-0 left-0 z-10"
+                                                    alt="" srcset="">
+                                            </div>
+                                            <div class="px-5 py-3 border border-solid border-gray-200">
+                                                <p class="font-semibold item-text">Handcrafted Paper Flowers</p>
+                                                <span class="text-xl block">$10</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="z-50 item-slider-detail-blog-child absolute top-1/2 w-16 flex items-center justify-center right-0 right-0 bottom-0 
+                                top-0 bg-white bg-opacity-50 transition-3s opacity-0 transform translate-x-full">
+                                    <span class="bx bx-chevron-right cursor-pointer w-10 h-10 rounded-full text-2xl flex  
+                                    justify-center z-10 items-center text-main bg-white border-main border-solid border 
+                                    hover:text-white hover:bg-main btn-new-release">
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <div>
+                        <p> Tags :
+                            <span class="color-form underline">Father’s Day</span>,
+                            <span class="color-form underline">What to Write</span>
+                        </p>
+                        <hr class="my-7">
+                        <p><span>←</span> <a href="" class="color-form">Order Post</a></p>
+                        <hr class="my-7">
+                        <p class="text-1.5xl font-semibold color-black_blur">0 comments</p>
+                        <hr class="my-7">
+                    </div>
+                    <div>
+                        <p class="text-1.5xl font-semibold color-black_blur mb-1">Leave a comment</p>
+                        <form action="" class="" method="post">
+                            <div class="w-full sm:flex sm:gap-2 md:gap-8">
+                                <div class="w-full sm:w-1/2">
+                                    <div>
+                                        <input type="text" placeholder="Name" class="w-full mb-2.5 p-2 rounded-sm border border-solid 
+                                        border-gray_border focus:border-input_focus">
+                                        <p class=""></p>
+                                    </div>
+                                    <div>
+                                        <input type="text" placeholder="Name" class="w-full mb-2.5 p-2 rounded-sm border border-solid 
+                                        border-gray_border focus:border-input_focus">
+                                        <p class=""></p>
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2">
+                                    <textarea name="" placeholder="Message" id="" class="w-full mb-2.5 p-2 rounded-sm border border-solid 
+                                    border-gray_border focus:border-input_focus" rows="2"></textarea>
+                                </div>
+                            </div>
+                            <p class="mb-3">Please note, comments must be approved before they are published</p>
+                            <button class="item-bg bg-main text-white font-semibold rounded-md px-3.5 py-2">Post
+                                comment</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="hidden md:block w-1/4">
+                    <p class="text-1.5xl font-600 text-black_blur">Recent Articles</p>
+                    <ul class="">
+                        <li class="pt-2">
+                            <a href="" class="block color-form underline">What to Say to Your Grandpa on Father's
+                                Day</a>
+                            <p>March 25, 2022</p>
+                        </li>
+                        <li class="pt-2">
+                            <a href="" class="block color-form underline">What to Say to Your Grandpa on Father's
+                                Day</a>
+                            <p>March 25, 2022</p>
+                        </li>
+                        <li class="pt-2">
+                            <a href="" class="block color-form underline">What to Say to Your Grandpa on Father's
+                                Day</a>
+                            <p>March 25, 2022</p>
+                        </li>
+                    </ul>
+                    <p class="text-1.5xl mt-1 font-600 text-black_blur">Categories</p>
+                    <ul class="">
+                        <li class="pt-2">
+                            <a href="" class="block color-form underline">#PetsOfLovepop</a>
+                        </li>
+                        <li class="pt-2">
+                            <a href="" class="block color-form underline">#PetsOfLovepop</a>
+                        </li>
+                        <li class="pt-2">
+                            <a href="" class="block color-form underline">#PetsOfLovepop</a>
+                        </li>
+                        <li class="pt-2">
+                            <a href="" class="block color-form underline">#PetsOfLovepop</a>
+                        </li>
+                        <li class="pt-2">
+                            <a href="" class="block color-form underline">#PetsOfLovepop</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -711,12 +802,13 @@
     <div id="modal" class="bg-black fixed top-0 left-0 bottom-0 right-0 z-50 bg-opacity-80" style="z-index: 9999;">
     </div>
 
-    <input type="text" class="hidden" id="length-cart" value="1">
+    <input type="text" class="hidden" id="index-current-new-release" value="0">
 
     <script src="./js/var.js"></script>
     <script src="./js/function.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/cart.js"></script>
+    <script src="./js/blog.js"></script>
     <script src="./js/app.js"></script>
 
 </body>

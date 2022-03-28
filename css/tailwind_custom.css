@@ -12,8 +12,40 @@
     background-color: #941924;
 }
 
+@media (min-width: 768px){
+    .md\:text-2\.5xl {
+        font-size: 1.75rem;
+    }
+}
+
+
+
+.color-form {
+    color: #0379b0;
+}
+
 .transition-3s {
     transition: all .3s;
+}
+
+.text-1\.5xl {
+    font-size: 22px;
+}
+
+.w-70\% {
+    width: 70%;
+}
+
+.w-30\% {
+    width: 30%;
+}
+
+.w-15 {
+    width: 3.75rem;
+}
+
+.h-15 {
+    height: 3.75rem;
 }
 
 .item-text:hover {
