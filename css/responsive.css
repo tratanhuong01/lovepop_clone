@@ -42,6 +42,12 @@
 } */
 
 @media (min-width: 1024px) {
+    .item-product-main:nth-child(2*n + 1) {
+        padding-left: 0;
+    }
+    .item-product-main:nth-child(3n) {
+        padding-right: 0;
+    }
     .wrapper {
         max-width: 976px;
         margin: auto;
