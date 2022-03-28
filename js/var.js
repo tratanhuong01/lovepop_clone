@@ -3,9 +3,14 @@ const sliderMagicalMoment = document.getElementById('slider-magical-moment');
 const btnMagicalMoment = document.getElementsByClassName('btn-magical-monent');
 const btnNewRelease = document.getElementsByClassName('btn-new-release');
 const sliderNewRelease = document.getElementById('slider-new-release');
+const indexCurrentNewRelease = document.getElementById('index-current-new-release');
+const indexCurrentMagicalMoment = document.getElementById('index-current-magical-moment');
 // slider home
 
 // menu
+const header = document.getElementById('header');
+const popupSearchMenu = document.getElementById('popup-search-menu');
+const inputSearchMenu = document.querySelector('.input-search-menu');
 const listItemMenu = document.getElementsByClassName('item-menu');
 const frontMenuActive = document.getElementById('front-menu-active');
 const btnOpenMenuMobie = document.getElementById('btn-menu-mobile');
@@ -36,4 +41,10 @@ const btnCloseModalCart = document.querySelector('.btn-close-modal-cart');
 // detail-product
 const buttonDetailInfo = document.getElementById('button-detail-info');
 const detailInfo = document.getElementById('detail-info');
+const bigSliderImage = document.getElementById('big-slider-image');
+const smallSliderImage = document.getElementById('small-slider-image');
+const bigButtonSliderImage = document.getElementsByClassName('big-button-slider-image');
+const smallButtonSliderImage = document.getElementsByClassName('small-button-slider-image');
+const indexCurrentBigSliderImage = document.getElementById('index-current-big-slider-image');
+const indexCurrentSmallSliderImage = document.getElementById('index-current-small-slider-image');
 // detail-product

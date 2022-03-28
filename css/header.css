@@ -132,3 +132,21 @@
     opacity: 1 !important;
     visibility: visible !important;
 }
+
+#popup-search-menu {
+    -webkit-box-shadow: 0 5px 10px 0 rgb(71 89 113 / 50%);
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0 5px 10px 0 rgb(71 89 113 / 50%);
+    padding-bottom: 0;
+    position: absolute;
+    width: 600px;
+    z-index: 9999;
+    top: 100%;
+    left: 0;
+}
+
+.sub-menu-last {
+    width: max-content !important;
+    margin-left: -260px;
+}

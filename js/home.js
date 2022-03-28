@@ -1,48 +1,31 @@
-
-
-let currentMagicMoment = 0;
-let currentNewRelease = 0;
-
 const clickSliderMagicMoment = (isNext) => {
+    let currentMagicMoment = Number(indexCurrentMagicalMoment.value);
     if (window.innerWidth >= 1024) {
         if (isNext) {
-            if (sliderMagicalMoment.children.length - 1 === currentMagicMoment) {
-                currentMagicMoment = 0;
-            }
-            else {
-                currentMagicMoment += 1;
-            }
+            sliderMagicalMoment.children.length - 1 === currentMagicMoment ?
+                currentMagicMoment = 0 : currentMagicMoment += 1;
         }
         else {
-            if (currentMagicMoment - 1 < 0) {
-                currentMagicMoment = sliderMagicalMoment.children.length - 1;
-            }
-            else {
-                currentMagicMoment -= 1;
-            }
+            currentMagicMoment - 1 < 0 ? currentMagicMoment = sliderMagicalMoment.children.length - 1
+                : currentMagicMoment -= 1;
         }
+        indexCurrentMagicalMoment.value = currentMagicMoment;
+        handleSliderMagicalMoment();
         sliderMagicalMoment.style.transform = `translateX(-${currentMagicMoment * 100}%)`;
     }
 }
 
 const clickSliderNewRelease = (isNext) => {
+    let currentNewRelease = Number(indexCurrentNewRelease.value);
+    const size = Math.floor(sliderNewRelease.childElementCount / numberResizeNewRelease());
     if (isNext) {
-        if (Math.floor(sliderNewRelease.childElementCount / 4) <= currentNewRelease + 1) {
-            currentNewRelease = 0
-        }
-        else {
-            currentNewRelease += 1
-        }
+        size <= currentNewRelease + 1 ? currentNewRelease = 0 : currentNewRelease += 1;
     }
     else {
-        if (currentNewRelease - 1 < 0) {
-            currentNewRelease = Math.floor(sliderNewRelease.childElementCount / 4) - 1;
-        }
-        else {
-            currentNewRelease -= 1;
-        }
-        console.log(currentNewRelease);
+        currentNewRelease - 1 < 0 ? currentNewRelease = size - 1 : currentNewRelease -= 1;
     }
+    indexCurrentNewRelease.value = currentNewRelease;
+    hanleSliderNewRelease();
     sliderNewRelease.style.transform = `translateX(-${currentNewRelease * 100}%)`;
 }
 

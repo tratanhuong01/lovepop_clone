@@ -2,15 +2,29 @@
 let isClick;
 let indexClick;
 let statusClickMenu;
+let isClickSearchMenu;
 
 [...listItemMenu].forEach((el, index) => {
-    el.addEventListener('click', () => {
+    el.addEventListener('click', (e) => {
         if (window.innerWidth < 1024) {
             labelSubMenuDisplay.innerHTML = el.children[0].innerHTML;
             subMenuMobileDisplay.innerHTML = (el.children[2].innerHTML);
             subMenuMobile.classList.add('menu-mobile-main', 'transition-menu-mobile-active');
         }
         else {
+            const clickOutSideMenu = () => {
+                if (indexClick !== index) {
+                    show();
+                    frontMenuActive.addEventListener('click', clickOutSideMenu)
+                }
+                else {
+                    indexClick = -1;
+                    frontMenuActive.style.opacity = '0';
+                    frontMenuActive.style.visibility = 'hidden';
+                    frontMenuActive.removeEventListener('click', clickOutSideMenu)
+                }
+                reset();
+            }
             const reset = () => {
                 [...listItemMenu].forEach(el_ => {
                     if (el_.children[2]) {
@@ -25,29 +39,24 @@ let statusClickMenu;
                 el.children[2].style.transform = 'scaleY(1)';
                 el.children[1].style.transform = 'rotate(180deg)';
                 if (listItemMenu.length - 1 === index) {
-                    el.children[2].style.marginLeft = '-120px';
                     el.children[2].style.gap = '12px';
                 }
             }
-            // reset();
-            if (!isClick) {
-                reset();
-                show();
+            if (indexClick === index) {
+                clickOutSideMenu();
             }
             else {
-                if (indexClick !== index) {
+                if (!isClick) {
                     reset();
                     show();
+                    frontMenuActive.addEventListener('click', clickOutSideMenu)
                 }
                 else {
-                    frontMenuActive.style.opacity = '0';
-                    frontMenuActive.style.visibility = 'hidden';
-                    reset();
+                    clickOutSideMenu();
                 }
+                indexClick = index;
             }
 
-            indexClick = index;
-            isClick = !isClick;
         }
     });
 });
@@ -77,10 +86,21 @@ returnMenuMain.addEventListener('click', () => {
     subMenuMobile.classList.remove('menu-mobile-main', 'transition-menu-mobile-active');
 });
 
+const handleOutsideInputSearchMenu = () => {
+    if (isClickSearchMenu) {
+        isClickSearchMenu = false;
+        popupSearchMenu.style.display = 'none';
+        window.removeEventListener('click', handleOutsideInputSearchMenu);
+    }
+    else {
+        popupSearchMenu.style.display = 'block';
+        isClickSearchMenu = !isClickSearchMenu;
+    }
+}
 
 const resizeEvent = () => {
-    generatePagination(sliderNewRelease, sliderNewReleasePagination, numberResizeNewRelease);
-    generatePagination(sliderMagicalMoment, sliderMagicalMomentPagination, numberResizeMagicalMoment);
+    hanleSliderNewRelease();
+    handleSliderMagicalMoment();
     if (window.innerWidth < 1024) {
         document.body.classList = 'preload';
         menuMain.classList.add('menu-mobile', 'transition-menu-mobile');
@@ -94,11 +114,27 @@ const resizeEvent = () => {
         subMenuMobile.classList.remove('menu-mobile', 'transition-menu-mobile', 'transition-menu-mobile-active',
             'menu-mobile-main', 'transition-menu');
     }
+    if (window.innerWidth < 768) {
+        isClickSearchMenu = false;
+        popupSearchMenu.style.display = 'none';
+        window.removeEventListener('click', handleOutsideInputSearchMenu);
+    }
 }
 
 window.addEventListener('resize', resizeEvent);
 
 resizeEvent();
+
+inputSearchMenu.addEventListener('click', async (e) => {
+    if (window.innerWidth >= 768) {
+        if (isClickSearchMenu) {
+            handleOutsideInputSearchMenu()
+        }
+        else {
+            window.addEventListener('click', handleOutsideInputSearchMenu);
+        }
+    }
+})
 
 
 

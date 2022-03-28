@@ -52,20 +52,136 @@
 
 <body class="">
 
-    <header class="">
+    <header id="header">
         <div class="flex justify-center items-center bg-main item-bg cursor-pointer font-semibold
         leading-4 h-8 md:h-10 select-none text-sm text-white">
             <a>Free Shipping on all U.S. orders</a>
         </div>
         <div class="border-b border-solid border-gray-200">
-            <div class="content-wrapper flex py-4 px-6 md:px-0 items-center jutify-between">
+            <div class="wrapper flex py-4 px-6 md:px-0 items-center jutify-between">
                 <div class="w-4/5 lg:w-2/3 flex flex-row-reverse items-center lg:flex-row">
-                    <div class="flex-1 lg:flex-0 lg:w-1/2">
-                        <div class="md:w-10/12 lg:w-full relative">
+                    <div class="flex-1 lg:flex-0 lg:w-1/2 relative">
+                        <div class="md:w-10/12 lg:w-full relative input-search-menu">
                             <input type="text" class="input-header text-xs w-full p-2"
                                 placeholder="What are you looking for?">
                             <i class="bx bx-search text-xl cursor-pointer absolute top-1/2 right-3 
                             transform -translate-y-1/2 text-gray-300"></i>
+                            <div id="popup-search-menu" class="hidden">
+                                <div class="px-5">
+                                    <div class="block hover:bg-main hover:text-white py-3 transition-5s border-2 border-solid border-main 
+                                    text-main w-11/12 mx-auto font-600 py-3 rounded-full mt-5 cursor-pointer 
+                                    text-center">
+                                        View all results for "<span>sunflower</span>""
+                                    </div>
+                                    <div class="my-9 flex">
+                                        <div class="border-r-2 pr-4 min-200px border-solid border-gray-200">
+                                            <p class="font-600 mb-4">Trending Searches</p>
+                                            <ul class="flex flex-col gap-3 mx-4">
+                                                <li class="flex items-center gap-4">
+                                                    <svg width="14" height="14" viewBox="0 0 12 15">
+                                                        <path fill="#C6C6C6" fill-rule="evenodd"
+                                                            d="M1 9.155v-.51c0-.79.185-1.532.555-2.222.825-1.253 1.325-1.414 1.501-.484.176.93.625 1.417 1.347 1.46.098-1.754.344-3.05.738-3.886.395-.836 1.028-1.617 1.9-2.341.366-.355.594-.16.686.585.137 1.118 1.02 2.081 2.165 3.616.762 1.023 1.132 2.283 1.107 3.782 0 2.676-2.238 4.845-5 4.845C3.24 14 1 11.83 1 9.155zm3.236 1.982c0 1.029.861 1.863 1.923 1.863s1.923-.834 1.923-1.863c.01-.577-.132-1.062-.426-1.455-.44-.59-.78-.96-.832-1.39-.036-.287-.124-.362-.265-.226-.335.279-.578.579-.73.9-.152.322-.246.82-.284 1.495-.277-.017-.45-.204-.518-.561-.067-.358-.26-.296-.577.186-.143.265-.214.55-.214.855v.196z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="italic font-300" style="font-size: 15px;">
+                                                        sunflower</span>
+                                                </li>
+                                                <li class="flex items-center gap-4">
+                                                    <svg width="14" height="14" viewBox="0 0 12 15">
+                                                        <path fill="#C6C6C6" fill-rule="evenodd"
+                                                            d="M1 9.155v-.51c0-.79.185-1.532.555-2.222.825-1.253 1.325-1.414 1.501-.484.176.93.625 1.417 1.347 1.46.098-1.754.344-3.05.738-3.886.395-.836 1.028-1.617 1.9-2.341.366-.355.594-.16.686.585.137 1.118 1.02 2.081 2.165 3.616.762 1.023 1.132 2.283 1.107 3.782 0 2.676-2.238 4.845-5 4.845C3.24 14 1 11.83 1 9.155zm3.236 1.982c0 1.029.861 1.863 1.923 1.863s1.923-.834 1.923-1.863c.01-.577-.132-1.062-.426-1.455-.44-.59-.78-.96-.832-1.39-.036-.287-.124-.362-.265-.226-.335.279-.578.579-.73.9-.152.322-.246.82-.284 1.495-.277-.017-.45-.204-.518-.561-.067-.358-.26-.296-.577.186-.143.265-.214.55-.214.855v.196z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="italic font-300" style="font-size: 15px;">
+                                                        sunflower</span>
+                                                </li>
+                                                <li class="flex items-center gap-4">
+                                                    <svg width="14" height="14" viewBox="0 0 12 15">
+                                                        <path fill="#C6C6C6" fill-rule="evenodd"
+                                                            d="M1 9.155v-.51c0-.79.185-1.532.555-2.222.825-1.253 1.325-1.414 1.501-.484.176.93.625 1.417 1.347 1.46.098-1.754.344-3.05.738-3.886.395-.836 1.028-1.617 1.9-2.341.366-.355.594-.16.686.585.137 1.118 1.02 2.081 2.165 3.616.762 1.023 1.132 2.283 1.107 3.782 0 2.676-2.238 4.845-5 4.845C3.24 14 1 11.83 1 9.155zm3.236 1.982c0 1.029.861 1.863 1.923 1.863s1.923-.834 1.923-1.863c.01-.577-.132-1.062-.426-1.455-.44-.59-.78-.96-.832-1.39-.036-.287-.124-.362-.265-.226-.335.279-.578.579-.73.9-.152.322-.246.82-.284 1.495-.277-.017-.45-.204-.518-.561-.067-.358-.26-.296-.577.186-.143.265-.214.55-.214.855v.196z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="italic font-300" style="font-size: 15px;">
+                                                        sunflower</span>
+                                                </li>
+                                                <li class="flex items-center gap-4">
+                                                    <svg width="14" height="14" viewBox="0 0 12 15">
+                                                        <path fill="#C6C6C6" fill-rule="evenodd"
+                                                            d="M1 9.155v-.51c0-.79.185-1.532.555-2.222.825-1.253 1.325-1.414 1.501-.484.176.93.625 1.417 1.347 1.46.098-1.754.344-3.05.738-3.886.395-.836 1.028-1.617 1.9-2.341.366-.355.594-.16.686.585.137 1.118 1.02 2.081 2.165 3.616.762 1.023 1.132 2.283 1.107 3.782 0 2.676-2.238 4.845-5 4.845C3.24 14 1 11.83 1 9.155zm3.236 1.982c0 1.029.861 1.863 1.923 1.863s1.923-.834 1.923-1.863c.01-.577-.132-1.062-.426-1.455-.44-.59-.78-.96-.832-1.39-.036-.287-.124-.362-.265-.226-.335.279-.578.579-.73.9-.152.322-.246.82-.284 1.495-.277-.017-.45-.204-.518-.561-.067-.358-.26-.296-.577.186-.143.265-.214.55-.214.855v.196z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="italic font-300" style="font-size: 15px;">
+                                                        sunflower</span>
+                                                </li>
+                                                <li class="flex items-center gap-4">
+                                                    <svg width="14" height="14" viewBox="0 0 12 15">
+                                                        <path fill="#C6C6C6" fill-rule="evenodd"
+                                                            d="M1 9.155v-.51c0-.79.185-1.532.555-2.222.825-1.253 1.325-1.414 1.501-.484.176.93.625 1.417 1.347 1.46.098-1.754.344-3.05.738-3.886.395-.836 1.028-1.617 1.9-2.341.366-.355.594-.16.686.585.137 1.118 1.02 2.081 2.165 3.616.762 1.023 1.132 2.283 1.107 3.782 0 2.676-2.238 4.845-5 4.845C3.24 14 1 11.83 1 9.155zm3.236 1.982c0 1.029.861 1.863 1.923 1.863s1.923-.834 1.923-1.863c.01-.577-.132-1.062-.426-1.455-.44-.59-.78-.96-.832-1.39-.036-.287-.124-.362-.265-.226-.335.279-.578.579-.73.9-.152.322-.246.82-.284 1.495-.277-.017-.45-.204-.518-.561-.067-.358-.26-.296-.577.186-.143.265-.214.55-.214.855v.196z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="italic font-300" style="font-size: 15px;">
+                                                        sunflower</span>
+                                                </li>
+                                                <li class="flex items-center gap-4">
+                                                    <svg width="14" height="14" viewBox="0 0 12 15">
+                                                        <path fill="#C6C6C6" fill-rule="evenodd"
+                                                            d="M1 9.155v-.51c0-.79.185-1.532.555-2.222.825-1.253 1.325-1.414 1.501-.484.176.93.625 1.417 1.347 1.46.098-1.754.344-3.05.738-3.886.395-.836 1.028-1.617 1.9-2.341.366-.355.594-.16.686.585.137 1.118 1.02 2.081 2.165 3.616.762 1.023 1.132 2.283 1.107 3.782 0 2.676-2.238 4.845-5 4.845C3.24 14 1 11.83 1 9.155zm3.236 1.982c0 1.029.861 1.863 1.923 1.863s1.923-.834 1.923-1.863c.01-.577-.132-1.062-.426-1.455-.44-.59-.78-.96-.832-1.39-.036-.287-.124-.362-.265-.226-.335.279-.578.579-.73.9-.152.322-.246.82-.284 1.495-.277-.017-.45-.204-.518-.561-.067-.358-.26-.296-.577.186-.143.265-.214.55-.214.855v.196z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="italic font-300" style="font-size: 15px;">
+                                                        sunflower</span>
+                                                </li>
+                                                <li class="flex items-center gap-4">
+                                                    <svg width="14" height="14" viewBox="0 0 12 15">
+                                                        <path fill="#C6C6C6" fill-rule="evenodd"
+                                                            d="M1 9.155v-.51c0-.79.185-1.532.555-2.222.825-1.253 1.325-1.414 1.501-.484.176.93.625 1.417 1.347 1.46.098-1.754.344-3.05.738-3.886.395-.836 1.028-1.617 1.9-2.341.366-.355.594-.16.686.585.137 1.118 1.02 2.081 2.165 3.616.762 1.023 1.132 2.283 1.107 3.782 0 2.676-2.238 4.845-5 4.845C3.24 14 1 11.83 1 9.155zm3.236 1.982c0 1.029.861 1.863 1.923 1.863s1.923-.834 1.923-1.863c.01-.577-.132-1.062-.426-1.455-.44-.59-.78-.96-.832-1.39-.036-.287-.124-.362-.265-.226-.335.279-.578.579-.73.9-.152.322-.246.82-.284 1.495-.277-.017-.45-.204-.518-.561-.067-.358-.26-.296-.577.186-.143.265-.214.55-.214.855v.196z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="italic font-300" style="font-size: 15px;">
+                                                        sunflower</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="flex-1 pl-9">
+                                            <p class="font-600">Trending Searches</p>
+                                            <ul class="flex-col flex">
+                                                <li class="flex items-center gap-6 py-4 border-b border-solid 
+                                                border-gray-200">
+                                                    <img src="./images/search-item.jpeg" width="100" alt="" srcset="">
+                                                    <div>
+                                                        <p class="font-600">Butterfly Bouquet</p>
+                                                        <p>$24</p>
+                                                    </div>
+                                                </li>
+                                                <li class="flex items-center gap-6 py-4 border-b border-solid 
+                                                border-gray-200">
+                                                    <img src="./images/search-item.jpeg" width="100" alt="" srcset="">
+                                                    <div>
+                                                        <p class="font-600">Butterfly Bouquet</p>
+                                                        <p>$24</p>
+                                                    </div>
+                                                </li>
+                                                <li class="flex items-center gap-6 py-4 border-b border-solid 
+                                                border-gray-200">
+                                                    <img src="./images/search-item.jpeg" width="100" alt="" srcset="">
+                                                    <div>
+                                                        <p class="font-600">Butterfly Bouquet</p>
+                                                        <p>$24</p>
+                                                    </div>
+                                                </li>
+                                                <li class="flex items-center gap-6 py-4 border-b border-solid 
+                                                border-gray-200">
+                                                    <img src="./images/search-item.jpeg" width="100" alt="" srcset="">
+                                                    <div>
+                                                        <p class="font-600">Butterfly Bouquet</p>
+                                                        <p>$24</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="mr-5 lg:mr-0 lg:w-1/2 flex gap-8 justify-center">
@@ -106,87 +222,100 @@
                 <span class="font-semibold">Shop By Category</span>
                 <span class="cursor-pointer text-2xl btn-close-menu-mobile">&times;</span>
             </div>
-            <ul class="wrapper justify-center ul-header-hover flex items-center">
-                <li><a class="text-first_nav">Easter</a>
-                </li>
-                <li class="item-menu"><a>Shop by Occasion</a><i class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
-                    <ul
-                        class="sub-menu w-full absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30 left-0 bg-white">
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Wedding</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Spring</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Just Because</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Anniversary</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Thank You</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Get Well</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Sympathy</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Thinking of You</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Congratulations</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">New Baby</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Retirement</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Love</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Friendship</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Summer</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Graduation</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Fall</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Winter</a></li>
-                    </ul>
-                </li>
-                <li class="item-menu"><a>Shop by Holiday</a><i class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
-                    <ul
-                        class="sub-menu w-full absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30 left-0 bg-white">
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                    </ul>
-                </li>
-                <li class="item-menu"><a>Shop by Recipient</a><i
-                        class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
-                    <ul
-                        class="sub-menu w-full absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30 left-0 bg-white">
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                    </ul>
-                </li>
-                <li class="item-menu"><a>Shop by Product Type</a><i
-                        class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
-                    <ul
-                        class="sub-menu w-full absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30 left-0 bg-white">
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                    </ul>
-                </li>
-                <li class="item-menu item-menu-hide"><a>Shop Pop Culture</a><i
-                        class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
-                    <ul
-                        class="sub-menu w-full absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30 left-0 bg-white">
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                    </ul>
-                </li>
-                <li class="item-menu hidden md:block"><a>More</a><i
-                        class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
-                    <ul class=" sub-menu flex absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30
-                    left-0 bg-white">
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                        <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="wrapper">
+                <ul class="ul-header-hover flex items-center" style="margin: 0 !important;">
+                    <li><a class="text-first_nav">Easter</a>
+                    </li>
+                    <li class="item-menu"><a>Shop by Occasion</a><i
+                            class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
+                        <ul
+                            class="sub-menu w-full absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30 left-0 bg-white">
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Wedding</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Spring</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Just Because</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Anniversary</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Thank You</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Get Well</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Sympathy</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Thinking of You</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Congratulations</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">New Baby</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Retirement</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Love</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Friendship</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Summer</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Graduation</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Fall</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Winter</a></li>
+                        </ul>
+                    </li>
+                    <li class="item-menu"><a>Shop by Holiday</a><i
+                            class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
+                        <ul
+                            class="sub-menu w-full absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30 left-0 bg-white">
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        </ul>
+                    </li>
+                    <li class="item-menu"><a>Shop by Recipient</a><i
+                            class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
+                        <ul
+                            class="sub-menu w-full absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30 left-0 bg-white">
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        </ul>
+                    </li>
+                    <li class="item-menu"><a>Shop by Product Type</a><i
+                            class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
+                        <ul
+                            class="sub-menu w-full absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30 left-0 bg-white">
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        </ul>
+                    </li>
+                    <li class="item-menu item-menu-hide"><a>Shop Pop Culture</a><i
+                            class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
+                        <ul
+                            class="sub-menu w-full absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30 left-0 bg-white">
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                        </ul>
+                    </li>
+                    <li class="item-menu hidden md:block"><a>More</a><i
+                            class='bx bx-chevron-down rotate-nav-icon text-3xl'></i>
+                        <ul class="sub-menu sub-menu-last flex absolute zIndex border-t border-solid border-gray-200 top-full px-2 z-30
+                        right-0 bg-white">
+                            <li class="flex flex-col clone-sub-menu-1200 pr-5 border-r border-solid border-gray-200 ">
+                                <p class="pt-3">SHOP POP CULTURE</p>
+                                <ul class="zIndex bg-white">
+                                    <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                                    <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                                    <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                                    <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                                    <li class="py-3 item-sub-menu"><a href="">Birthday</a></li>
+                                </ul>
+                            </li>
+                            <li class="py-3 item-sub-menu"><a href="">NEW RELEASES</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">BEST SELLERS</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">THE VAULT</a></li>
+                            <li class="py-3 item-sub-menu"><a href="">5 FOR $50</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -196,80 +325,90 @@
             class="z-30 invisible bg-black bg-opacity-50 absolute top-0 left-0 right-0 bottom-0">
         </div>
 
-        <section class="content-wrapper px-5 lg:px-0 py-8 lg:flex gap-8">
+        <section class="wrapper px-5 lg:px-0 py-8 lg:flex gap-8">
             <div class="lg:w-7/12">
-                <ul
-                    class="w-full item-hover flex max-w-full overflow-hidden relative border-2 border-solid border-gray_border">
-                    <span
-                        class="bx bx-chevron-left cursor-pointer w-10 h-10 rounded-full text-2xl flex items-center
-                    absolute top-1/2 left-2 transform -translate-y-1/2 text-main bg-white border-main border-solid border 
-                    hover:text-white hover:bg-main justify-center big-button-slider-image item-display -translate-x-16">
+                <div class="w-full overflow-hidden relative item-hover border-2 border-solid border-gray_border">
+                    <span class="bx bx-chevron-left cursor-pointer w-10 h-10 rounded-full text-2xl flex items-center
+                    absolute top-1/2 -left-20 transform -translate-y-1/2 text-main bg-white border-main border-solid border 
+                    hover:text-white hover:bg-main justify-center big-button-slider-image button-slider-image-left 
+                    item-display z-50">
                     </span>
-                    <li class="flex-shrink-0 w-full">
-                        <img src="./images/detail-1.jpeg" class="w-full h-full object-cover" alt="" srcset="">
-                    </li>
-                    <li class="flex-shrink-0 w-full">
-                        <img src="./images/detail-2.jpeg" class="w-full h-full object-cover" alt="" srcset="">
-                    </li>
-                    <li class="flex-shrink-0 w-full">
-                        <img src="./images/detail-3.jpeg" class="w-full h-full object-cover" alt="" srcset="">
-                    </li>
-                    <li class="flex-shrink-0 w-full">
-                        <img src="./images/detail-4.jpeg" class="w-full h-full object-cover" alt="" srcset="">
-                    </li>
+                    <ul id="big-slider-image" class="w-full flex transition-5s">
+                        <li class="flex-shrink-0 w-full">
+                            <img src="./images/detail-1.jpeg" class="w-full h-full object-cover" alt="" srcset="">
+                        </li>
+                        <li class="flex-shrink-0 w-full">
+                            <img src="./images/detail-2.jpeg" class="w-full h-full object-cover" alt="" srcset="">
+                        </li>
+                        <li class="flex-shrink-0 w-full">
+                            <img src="./images/detail-3.jpeg" class="w-full h-full object-cover" alt="" srcset="">
+                        </li>
+                        <li class="flex-shrink-0 w-full">
+                            <img src="./images/detail-4.jpeg" class="w-full h-full object-cover" alt="" srcset="">
+                        </li>
+                        <li class="flex-shrink-0 w-full">
+                            <img src="./images/detail-3.jpeg" class="w-full h-full object-cover" alt="" srcset="">
+                        </li>
+                        <li class="flex-shrink-0 w-full">
+                            <img src="./images/detail-1.jpeg" class="w-full h-full object-cover" alt="" srcset="">
+                        </li>
+                    </ul>
                     <span class="bx bx-chevron-right cursor-pointer w-10 h-10 rounded-full text-2xl flex items-center
+                    absolute top-1/2 -right-20 transform -translate-y-1/2 text-main bg-white border-main border-solid border 
+                    hover:text-white hover:bg-main justify-center big-button-slider-image button-slider-image-right 
+                    item-display z-50">
+                    </span>
+                </div>
+                <div class="w-full overflow-hidden mt-8 item-hover relative">
+                    <span class="bx bx-chevron-left cursor-pointer w-10 h-10 translate-x-0 rounded-full text-2xl flex items-center opacity-0 
+                        absolute top-1/2 left-2 transform -translate-y-1/2 text-main bg-white border-main border-solid border 
+                        hover:text-white hover:bg-main justify-center small-button-slider-image button-slider-image-left 
+                        item-display z-50">
+                    </span>
+                    <ul id="small-slider-image" class="hidden transition-5s lg:flex w-full">
+                        <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
+                            <div class="border border-solid border-gray_border">
+                                <img src="./images/detail-1.jpeg" class="w-full h-full object-cover item-child-image-product 
+                                opacity-50" alt="" srcset="">
+                            </div>
+                        </li>
+                        <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
+                            <div class="border border-solid border-gray_border">
+                                <img src="./images/detail-2.jpeg" class="w-full h-full object-cover item-child-image-product 
+                                opacity-50" alt="" srcset="">
+                            </div>
+                        </li>
+                        <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
+                            <div class="border border-solid border-gray_border">
+                                <img src="./images/detail-3.jpeg" class="w-full h-full object-cover item-child-image-product 
+                                opacity-50" alt="" srcset="">
+                            </div>
+                        </li>
+                        <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
+                            <div class="border border-solid border-gray_border">
+                                <img src="./images/detail-4.jpeg" class="w-full h-full object-cover item-child-image-product 
+                                opacity-50" alt="" srcset="">
+                            </div>
+                        </li>
+                        <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
+                            <div class="border border-solid border-gray_border">
+                                <img src="./images/detail-3.jpeg" class="w-full h-full object-cover item-child-image-product 
+                                opacity-50" alt="" srcset="">
+                            </div>
+                        </li>
+                        <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
+                            <div class="border border-solid border-gray_border">
+                                <img src="./images/detail-1.jpeg" class="w-full h-full object-cover item-child-image-product 
+                                opacity-50" alt="" srcset="">
+                            </div>
+                        </li>
+                    </ul>
+                    <span class="bx bx-chevron-right cursor-pointer w-10 h-10 rounded-full text-2xl flex items-center opacity-0 
                     absolute top-1/2 right-2 transform -translate-y-1/2 text-main bg-white border-main border-solid border 
-                    hover:text-white hover:bg-main justify-center big-button-slider-image item-display translate-x-16">
+                    hover:text-white hover:bg-main justify-center small-button-slider-image button-slider-right
+                    item-display z-50">
                     </span>
-                </ul>
-                <ul class="hidden lg:flex mt-8 max-w-full w-full item-hover relative overflow-hidden justify-between">
-                    <span
-                        class="bx bx-chevron-left cursor-pointer w-10 h-10 rounded-full text-2xl flex items-center opacity-0 
-                    absolute top-1/2 left-5 transform -translate-y-1/2 text-main bg-white border-main border-solid border 
-                    hover:text-white hover:bg-main justify-center big-button-slider-image item-display -translate-x-16 z-50">
-                    </span>
-                    <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
-                        <div class="border border-solid border-gray_border">
-                            <img src="./images/detail-1.jpeg" class="w-full h-full object-cover item-child-image-product 
-                            opacity-50" alt="" srcset="">
-                        </div>
-                    </li>
-                    <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
-                        <div class="border border-solid border-gray_border">
-                            <img src="./images/detail-2.jpeg" class="w-full h-full object-cover item-child-image-product 
-                            opacity-50" alt="" srcset="">
-                        </div>
-                    </li>
-                    <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
-                        <div class="border border-solid border-gray_border">
-                            <img src="./images/detail-3.jpeg" class="w-full h-full object-cover item-child-image-product 
-                            opacity-50" alt="" srcset="">
-                        </div>
-                    </li>
-                    <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
-                        <div class="border border-solid border-gray_border">
-                            <img src="./images/detail-4.jpeg" class="w-full h-full object-cover item-child-image-product 
-                            opacity-50" alt="" srcset="">
-                        </div>
-                    </li>
-                    <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
-                        <div class="border border-solid border-gray_border">
-                            <img src="./images/detail-3.jpeg" class="w-full h-full object-cover item-child-image-product 
-                            opacity-50" alt="" srcset="">
-                        </div>
-                    </li>
-                    <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
-                        <div class="border border-solid border-gray_border">
-                            <img src="./images/detail-1.jpeg" class="w-full h-full object-cover item-child-image-product 
-                            opacity-50" alt="" srcset="">
-                        </div>
-                    </li>
-                    <span
-                        class="bx bx-chevron-right cursor-pointer w-10 h-10 rounded-full text-2xl flex items-center opacity-0 
-                    absolute top-1/2 right-5 transform -translate-y-1/2 text-main bg-white border-main border-solid border 
-                    hover:text-white hover:bg-main justify-center big-button-slider-image item-display translate-x-16 z-50">
-                    </span>
-                </ul>
+                </div>
             </div>
             <div class="mt-5 lg:mt-0 lg:w-5/12">
                 <div class="text-gray_first flex items-center gap-0.5">
@@ -825,7 +964,7 @@
             <div class="mt-12 mb-4">
                 <p class="text-2.5xl font-bold text-center">You May Also Like</p>
                 <div class="w-full mt-9 relative px-1 flex justify-center items-center">
-                    <span class="bx bx-chevron-left cursor-pointer w-10 h-10 rounded-full text-2xl hidden lg:flex  
+                    <span class="bx bx-chevron-left cursor-pointer w-10 h-10 rounded-full text-2xl flex  
                     justify-center z-10 items-center text-main bg-white border-main border-solid border 
                     hover:text-white hover:bg-main btn-new-release">
                     </span>
@@ -883,7 +1022,7 @@
                             </div>
                         </a>
                     </div>
-                    <span class="bx bx-chevron-right cursor-pointer w-10 h-10 rounded-full text-2xl hidden lg:flex  
+                    <span class="bx bx-chevron-right cursor-pointer w-10 h-10 rounded-full text-2xl flex  
                     justify-center z-10 items-center text-main bg-white border-main border-solid border 
                     hover:text-white hover:bg-main btn-new-release">
                     </span>
@@ -909,6 +1048,10 @@
 
     <div id="modal" class="bg-black fixed top-0 left-0 bottom-0 right-0 z-50 bg-opacity-80" style="z-index: 9999;">
     </div>
+
+    <input type="text" class="hidden" id="index-current-new-release" value="0">
+    <input type="text" class="hidden" id="index-current-big-slider-image" value="0">
+    <input type="text" class="hidden" id="index-current-small-slider-image" value="4">
 
     <script src="./js/var.js"></script>
     <script src="./js/function.js"></script>

@@ -5,8 +5,8 @@
 }
 
 .item-parent-image-product {
-    width: 25%;
-    padding: 0rem 1rem;
+    width: calc(25% - 1.5rem);
+    margin-right: 2rem;
 }
 
 /* .big-button-slider-image {
@@ -14,11 +14,17 @@
     transform: translateX(0%);
 } */
 
-.item-hover:hover .big-button-slider-image {
+.item-hover:hover .button-slider-image-left {
     transition: all .5s;
-    transform: translate(0%,-50%);
+    left: 0.5rem;
 }
 
-#detail-info {
-    transition: all .3s;
+.item-hover:hover .button-slider-image-right {
+    transition: all .5s;
+    right: 0.5rem;
 }
+
+
+/* #detail-info {
+    transition: all .5s;
+} */
