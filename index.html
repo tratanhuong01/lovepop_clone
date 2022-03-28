@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./font/stylesheet.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/tailwind_custom.css">
-    <link rel="stylesheet" href="./css/detail-product.css">
     <link rel="stylesheet" href="./css/cart.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
@@ -22,6 +21,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./js/tailwind.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        main: '#ce2333',
+                        first_nav: 'rgb(93, 63, 211)',
+                        yellow: '#F5CC0F',
+                        blue: '#1C59A9',
+                        star: '#F78D28',
+                        gray_first: '#757575',
+                        footer: '#333',
+                        twitter: '#2876b4',
+                        gray_border: '#e6e6e6',
+                        gray_bg: '#f9f9f9',
+                        facebook: '#3a589d',
+                        pinterest: '#cb2320',
+                        instagram: '#833ab4',
+                        green: '#2a522e',
+                        green_second: '#5BBA47'
+                    },
+                }
+            }
+        }
+    </script>
 
 </head>
 
@@ -300,153 +325,447 @@
             class="z-30 invisible bg-black bg-opacity-50 absolute top-0 left-0 right-0 bottom-0">
         </div>
 
-        <section class="wrapper px-5 lg:px-0 py-8 lg:flex gap-8">
-            <div class="lg:w-7/12">
-                <div class="w-full overflow-hidden relative item-hover border-2 border-solid border-gray_border">
-                    <span class="bx bx-chevron-left cursor-pointer w-10 h-10 rounded-full text-2xl flex items-center
-                    absolute top-1/2 -left-20 transform -translate-y-1/2 text-main bg-white border-main border-solid border 
-                    hover:text-white hover:bg-main justify-center big-button-slider-image button-slider-image-left 
-                    item-display z-50">
-                    </span>
-                    <ul id="big-slider-image" class="w-full flex transition-5s">
-                        <li class="flex-shrink-0 w-full">
-                            <img src="./images/detail-1.jpeg" class="w-full h-full object-cover" alt="" srcset="">
-                        </li>
-                        <li class="flex-shrink-0 w-full">
-                            <img src="./images/detail-2.jpeg" class="w-full h-full object-cover" alt="" srcset="">
-                        </li>
-                        <li class="flex-shrink-0 w-full">
-                            <img src="./images/detail-3.jpeg" class="w-full h-full object-cover" alt="" srcset="">
-                        </li>
-                        <li class="flex-shrink-0 w-full">
-                            <img src="./images/detail-4.jpeg" class="w-full h-full object-cover" alt="" srcset="">
-                        </li>
-                        <li class="flex-shrink-0 w-full">
-                            <img src="./images/detail-3.jpeg" class="w-full h-full object-cover" alt="" srcset="">
-                        </li>
-                        <li class="flex-shrink-0 w-full">
-                            <img src="./images/detail-1.jpeg" class="w-full h-full object-cover" alt="" srcset="">
-                        </li>
-                    </ul>
-                    <span class="bx bx-chevron-right cursor-pointer w-10 h-10 rounded-full text-2xl flex items-center
-                    absolute top-1/2 -right-20 transform -translate-y-1/2 text-main bg-white border-main border-solid border 
-                    hover:text-white hover:bg-main justify-center big-button-slider-image button-slider-image-right 
-                    item-display z-50">
-                    </span>
-                </div>
-                <div class="w-full overflow-hidden mt-8 item-hover relative">
-                    <span class="bx bx-chevron-left cursor-pointer w-10 h-10 translate-x-0 rounded-full text-2xl flex items-center opacity-0 
-                        absolute top-1/2 left-2 transform -translate-y-1/2 text-main bg-white border-main border-solid border 
-                        hover:text-white hover:bg-main justify-center small-button-slider-image button-slider-image-left 
-                        item-display z-50">
-                    </span>
-                    <ul id="small-slider-image" class="hidden transition-5s lg:flex w-full">
-                        <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
-                            <div class="border border-solid border-gray_border">
-                                <img src="./images/detail-1.jpeg" class="w-full h-full object-cover item-child-image-product 
-                                opacity-50" alt="" srcset="">
-                            </div>
-                        </li>
-                        <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
-                            <div class="border border-solid border-gray_border">
-                                <img src="./images/detail-2.jpeg" class="w-full h-full object-cover item-child-image-product 
-                                opacity-50" alt="" srcset="">
-                            </div>
-                        </li>
-                        <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
-                            <div class="border border-solid border-gray_border">
-                                <img src="./images/detail-3.jpeg" class="w-full h-full object-cover item-child-image-product 
-                                opacity-50" alt="" srcset="">
-                            </div>
-                        </li>
-                        <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
-                            <div class="border border-solid border-gray_border">
-                                <img src="./images/detail-4.jpeg" class="w-full h-full object-cover item-child-image-product 
-                                opacity-50" alt="" srcset="">
-                            </div>
-                        </li>
-                        <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
-                            <div class="border border-solid border-gray_border">
-                                <img src="./images/detail-3.jpeg" class="w-full h-full object-cover item-child-image-product 
-                                opacity-50" alt="" srcset="">
-                            </div>
-                        </li>
-                        <li class="cursor-pointer flex-shrink-0 h-full item-parent-image-product">
-                            <div class="border border-solid border-gray_border">
-                                <img src="./images/detail-1.jpeg" class="w-full h-full object-cover item-child-image-product 
-                                opacity-50" alt="" srcset="">
-                            </div>
-                        </li>
-                    </ul>
-                    <span class="bx bx-chevron-right cursor-pointer w-10 h-10 rounded-full text-2xl flex items-center opacity-0 
-                    absolute top-1/2 right-2 transform -translate-y-1/2 text-main bg-white border-main border-solid border 
-                    hover:text-white hover:bg-main justify-center small-button-slider-image button-slider-right
-                    item-display z-50">
-                    </span>
-                </div>
-            </div>
-            <div class="mt-5 lg:mt-0 lg:w-5/12">
-                <div class="text-gray_first flex items-center gap-0.5">
-                    <i class='bx bxs-magic-wand'></i> <span class="">New!</span>
-                </div>
-                <p class="font-semibold text-2xl text-lg pt-3 pb-4">Handcrafted Paper Flowers: Pink & Purple Roses (6
-                    Stems)</p>
-                <span class="text-xl block">$10</span>
-                <div class="flex items-center">
-                    <div class="flex items-center gap-0.5 text-xl">
-                        <i class="bx bxs-star text-star"></i>
-                        <i class="bx bxs-star text-star"></i>
-                        <i class="bx bxs-star text-star"></i>
-                        <i class="bx bxs-star text-star"></i>
-                        <i class="bx bxs-star text-star"></i>
+        <a href="" class="text-center break-all block py-2 md:py-4 bg-blue text-yellow font-300">
+            SUNFLOWERS FOR UKRAINE.
+            <span class="hidden md:inline">FOR THE MONTH OF MARCH, LOVEPOP IS DONATING 100% OF SALES OF OUR SUNFLOWER
+                BLOOM CARD TO HELP THE PEOPLE OF UKRAINE.</span>
+            LEARN MORE.
+        </a>
+
+        <section class="banner relative" style="background-image: url('../images/banner.jpg')">
+            <img src="./images/banner-sm.jpeg" class="banner block md:hidden" alt="" srcset="">
+            <div class="wrapper px-5 md:px-0 relative">
+                <div class="w-full md:w-5/12 banner flex items-center">
+                    <div>
+                        <h2 class="hidden md:block font-bold text-5xl text-green">Beautiful, everlasting blooms</h2>
+                        <p class="mt-6 text-center md:text-left text-xl font-300 text-green">Make a
+                            statement with our new
+                            Handcrafted Paper
+                            Flowers. Now available in
+                            soft spring
+                            shades, each arrangement is unique—just like real flowers—but, these will last a
+                            lifetime.</p>
+                        <button class="item-bg md:mx-0 mx-auto block mt-6 w-full sm:w-56 rounded-xl py-4 text-xl 
+                            bg-main text-white font-bold">
+                            Shop Now
+                        </button>
                     </div>
-                    <span class="ml-1 text-gray_first font-400">(6 reviews)</span>
                 </div>
-                <button class="item-bg bg-main py-4 mt-6 block font-bold text-xl text-white w-full rounded-xl">
-                    Add to cart
-                </button>
-                <hr class="border-gray_border mt-5 mb-3">
-                <div id="button-detail-info" class="flex justify-between cursor-pointer">
-                    <span class="font-semibold">Detail</span>
-                    <span class="bx bx-minus text-2xl"></span>
-                </div>
-                <div id="detail-info">
-                    <p class="mt-5">Everlasting, intricate, and one-of-a-kind—make lasting memories with our brand
-                        <span class="font-semibold italic">new</span> Handcrafted Paper
-                        Flowers.
-                    </p>
-                    <p class="mt-6">Perfect for Mother's Day, birthdays, anniversaries, or every day "just because I
-                        love
-                        you" moments,
-                        these beautiful blooms are handcrafted to impress.</p>
-                    <p>Our Handcrafted Paper Flowers will constantly wow and never wilt as no water is needed to
-                        keep
-                        these
-                        allergy-friendly blooms bright. With every petal made by hand from premium paper, each
-                        arrangement
-                        is
-                        unique—just like real roses, but these will last a lifetime.</p>
-                    <p class="font-semibold mt-6">What's included:</p>
-                    <p>6 stemmed paper roses</p>
-                    <p>3 stemmed paper baby's breath</p>
-                    <p>3 paper mint leaf stems</p>
-                    <p>2 paper eucalyptus stems</p>
-                    <p>1 white ribbon to complete the arrangement</p>
-                    <p> 1 beautiful box for shipping</p>
-                    <p> * Vase not included!</p>
-                    <p class="font-semibold mt-6">Dimensions:</p>
-                    <p>Our Handcrafted Paper Flowers are 13 inches in length, with the flower petals being 1.7
-                        inches in
-                        height.</p>
-
-                    <p class="mt-6">Explore our full collection of
-                        <span class="font-semibold underline">Handcrafted Paper Flowers.</span>
-                    </p>
-                </div>
-                <hr class="border-gray_border mb-5 mt-3">
-
             </div>
         </section>
+
+        <section class="content-main wrapper lg:hidden block">
+            <div class="flex justify-between w-full text-xs">
+                <a href="" class="block w-1/6 text-center item-text">
+                    <div class="overflow-hidden w-17 h-17 mx-auto rounded-full item-image-round">
+                        <img src="./images/birthday.jpeg" alt="" class="w-full h-full rounded-full transform 
+                            scale-100" srcset="">
+                    </div>
+                    <h3 class="block text-center mt-2">Birthday</h3>
+                </a>
+                <a href="" class="block w-1/6 text-center item-text">
+                    <div class="overflow-hidden w-17 h-17 mx-auto rounded-full item-image-round">
+                        <img src="./images/Circle_PostEaster.jpeg" alt="" class="w-full h-full rounded-full transform 
+                        hover:scale-110" srcset="">
+                    </div>
+                    <h3 class="block text-center mt-2">Birthday</h3>
+                </a>
+                <a href="" class="block w-1/6 text-center item-text">
+                    <div class="overflow-hidden w-17 h-17 mx-auto rounded-full item-image-round">
+                        <img src="./images/easter.jpeg" alt="" class="w-full h-full rounded-full transform 
+                        hover:scale-110" srcset="">
+                    </div>
+                    <h3 class="block text-center mt-2">Birthday</h3>
+                </a>
+                <a href="" class="block w-1/6 text-center item-text">
+                    <div class="overflow-hidden w-17 h-17 mx-auto rounded-full item-image-round">
+                        <img src="./images/just-because.jpeg" alt="" class="w-full h-full rounded-full transform 
+                            hover:scale-110" srcset="">
+                    </div>
+                    <h3 class="block text-center mt-2">Birthday</h3>
+                </a>
+                <a href="" class="block w-1/6 text-center item-text">
+                    <div class="overflow-hidden w-17 h-17 mx-auto rounded-full item-image-round">
+                        <img src="./images/sympathy.jpeg" alt="" class="w-full h-full rounded-full transform 
+                            hover:scale-110" srcset="">
+                    </div>
+                    <h3 class="block text-center mt-2">Birthday</h3>
+                </a>
+                <a href="" class="block w-1/6 text-center item-text">
+                    <div class="overflow-hidden w-17 h-17 mx-auto rounded-full item-image-round">
+                        <img src="./images/anniversary.jpeg" alt="" class="w-full h-full rounded-full transform 
+                            hover:scale-110" srcset="">
+                    </div>
+                    <h3 class="block text-center mt-2">Birthday</h3>
+                </a>
+            </div>
+        </section>
+
+        <section class="content-main wrapper">
+            <p class="font-bold text-2.5xl text-center mb-8">Shop now</p>
+            <div class="flex w-full md:text-base flex-wrap">
+                <a href="" class="block w-1/2 px-4 mb-2 md:mb-0 md:w-1/6 item-text">
+                    <div class="overflow-hidden w-full rounded-full item-image-round">
+                        <img src="./images/birthday.jpeg" alt="" class="w-full h-full rounded-full transform 
+                            scale-100" srcset="">
+                    </div>
+                    <h3 class="block text-center mt-2">Birthday</h3>
+                </a>
+                <a href="" class="block w-1/2 px-4 mb-2 md:mb-0 md:w-1/6 item-text">
+                    <div class="overflow-hidden w-full rounded-full item-image-round">
+                        <img src="./images/Circle_PostEaster.jpeg" alt="" class="w-full h-full rounded-full transform 
+                        hover:scale-110" srcset="">
+                    </div>
+                    <h3 class="block text-center mt-2">Birthday</h3>
+                </a>
+                <a href="" class="block w-1/2 px-4 mb-2 md:mb-0 md:w-1/6 item-text">
+                    <div class="overflow-hidden w-full rounded-full item-image-round">
+                        <img src="./images/easter.jpeg" alt="" class="w-full h-full rounded-full transform 
+                        hover:scale-110" srcset="">
+                    </div>
+                    <h3 class="block text-center mt-2">Birthday</h3>
+                </a>
+                <a href="" class="block w-1/2 px-4 mb-2 md:mb-0 md:w-1/6 item-text">
+                    <div class="overflow-hidden w-full rounded-full item-image-round">
+                        <img src="./images/just-because.jpeg" alt="" class="w-full h-full rounded-full transform 
+                            hover:scale-110" srcset="">
+                    </div>
+                    <h3 class="block text-center mt-2">Birthday</h3>
+                </a>
+                <a href="" class="block w-1/2 px-4 mb-2 md:mb-0 md:w-1/6 item-text">
+                    <div class="overflow-hidden w-full rounded-full item-image-round">
+                        <img src="./images/sympathy.jpeg" alt="" class="w-full h-full rounded-full transform 
+                            hover:scale-110" srcset="">
+                    </div>
+                    <h3 class="block text-center mt-2">Birthday</h3>
+                </a>
+                <a href="" class="block w-1/2 px-4 mb-2 md:mb-0 md:w-1/6 item-text">
+                    <div class="overflow-hidden w-full rounded-full item-image-round">
+                        <img src="./images/anniversary.jpeg" alt="" class="w-full h-full rounded-full transform 
+                            hover:scale-110" srcset="">
+                    </div>
+                    <h3 class="block text-center mt-2">Birthday</h3>
+                </a>
+            </div>
+        </section>
+
+        <section class="banner-bottom relative mt-10" style="background: url('./images/banner.jpg');
+        background-size: cover;">
+            <div class="wrapper">
+                <img src="./images/banner-bottom.jpg" class="banner-bottom md:hidden" alt="" srcset="">
+                <div class=" px-5 md:px-0 relative">
+                    <div class="w-full text-center md:text-left md:w-5/12 banner-bottom flex items-center">
+                        <div>
+                            <h2 class="hidden md:block font-bold text-5xl text-green">Personalize and Send Direct</h2>
+                            <p class="mt-6 text-xl font-300 text-green">Add a custom message and/or
+                                photo with eligible cards and we’ll send it directly to your recipient.</p>
+                            <button class="w-full item-bg block mt-6 mx-auto sm:w-56 text-xl rounded-xl py-4 bg-main 
+                            md:mx-0 text-white font-bold">
+                                Shop now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-main wrapper">
+            <p class="font-bold text-2.5xl text-center mb-8">Shop our products</p>
+            <div class="flex flex-wrap w-full">
+                <a href="" class="block w-1/2 px-4 mb-2 lg:mb-0 lg:w-1/6 item-text">
+                    <div class="overflow-hidden w-full item-image-round">
+                        <img src="./images/CP3515_Star_Wars_Grogu_Decor_Showoff_crop__1_.jpeg" alt=""
+                            class="w-full h-full" srcset="">
+                    </div>
+                    <p class="text-center my-4 font-semibold">Pop-Up Cards</p>
+                    <p class="text-center text-sm md:text-base font-300">
+                        Celebrate every holiday, milestone, and everyday moment with a pop of love!
+                    </p>
+                </a>
+                <a href="" class="block w-1/2 px-4 mb-2 lg:mb-0 lg:w-1/6 item-text">
+                    <div class="overflow-hidden w-full item-image-round">
+                        <img src="./images/Garden_4_Pack_Notecards_Lifestyles_crop.jpeg" alt="" class="w-full h-full"
+                            srcset="">
+                    </div>
+                    <p class="text-center my-4 font-semibold">Pop-Up Cards</p>
+                    <p class="text-center text-sm md:text-base font-300">
+                        Celebrate every holiday, milestone, and everyday moment with a pop of love!
+                    </p>
+                </a>
+                <a href="" class="block w-1/2 px-4 mb-2 lg:mb-0 lg:w-1/6 item-text">
+                    <div class="overflow-hidden w-full item-image-round">
+                        <img src="./images/Just_Because_Bouquets_Square_crop.jpeg" alt="" class="w-full h-full"
+                            srcset="">
+                    </div>
+                    <p class="text-center my-4 font-semibold">Pop-Up Cards</p>
+                    <p class="text-center text-sm md:text-base font-300">
+                        Celebrate every holiday, milestone, and everyday moment with a pop of love!
+                    </p>
+                </a>
+                <a href="" class="block w-1/2 px-4 mb-2 lg:mb-0 lg:w-1/6 item-text">
+                    <div class="overflow-hidden w-full item-image-round">
+                        <img src="./images/PA2643_Playpop_Explorers_The_Cheersquad_Collection_Pouch_1_of_6_crop.jpeg"
+                            alt="" class="w-full h-full" srcset="">
+                    </div>
+                    <p class="text-center my-4 font-semibold">Pop-Up Cards</p>
+                    <p class="text-center text-sm md:text-base font-300">
+                        Celebrate every holiday, milestone, and everyday moment with a pop of love!
+                    </p>
+                </a>
+                <a href="" class="block w-1/2 px-4 mb-2 lg:mb-0 lg:w-1/6 item-text">
+                    <div class="overflow-hidden w-full item-image-round">
+                        <img src="./images/Stickerpop_Monarch_Butterfly_crop.jpeg" alt="" class="w-full h-full"
+                            srcset="">
+                    </div>
+                    <p class="text-center my-4 font-semibold">Pop-Up Cards</p>
+                    <p class="text-center text-sm md:text-base font-300">
+                        Celebrate every holiday, milestone, and everyday moment with a pop of love!
+                    </p>
+                </a>
+                <a href="" class="block w-1/2 px-4 mb-2 lg:mb-0 lg:w-1/6 item-text">
+                    <div class="overflow-hidden w-full item-image-round">
+                        <img src="./images/CP3515_Star_Wars_Grogu_Decor_Showoff_crop__1_.jpeg" alt=""
+                            class="w-full h-full" srcset="">
+                    </div>
+                    <div>
+                        <p class="text-center my-4 font-semibold">Pop-Up Cards</p>
+                        <p class="text-center text-sm md:text-base font-300">
+                            Celebrate every holiday, milestone, and everyday moment with a pop of love!
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="pt-10 pb-20 lg:pb-28 mt-16 text-center overflow-hidden relative" style="background-image: url('./images/background.png');
+                background-size: cover;">
+            <span class="hidden lg:flex bx bx-chevron-left cursor-pointer w-10 h-10 rounded-full text-2xl 
+                    justify-center z-10 items-center text-main bg-white border-main border-solid border 
+                    absolute top-1/2 transform left-3 -translate-y-1/2 hover:text-white hover:bg-main
+                     btn-magical-monent">
+            </span>
+            <p class="text-5xl lg:text-7xl font-700 lg:pt-10 text-white">Millions Of Magical Moments</p>
+            <p class="font-300 pt-3 text-xl text-gray-200">Over 42,332,316 moments shared</p>
+            <div id="slider-magical-moment" class="slider w-full flex">
+                <div class="w-full lg:px-14 flex-shrink-0">
+                    <div class="wrapper slider flex py-8 lg:flex-wrap lg:justify-around">
+                        <div class="mt-20 flex-shrink-0 w-full lg:w-auto lg:flex-shrink-1 lg:mb-10 lg:mt-0 lg:pr-12 
+                        item-near-footer relative flex items-center relative">
+                            <div class="w-full rounded-xl mx-auto lg:ml-auto lg:mr-0 text-left flex flex-col lg:flex-row 
+                                items-center p-4 bg-white">
+                                <img src="./images/Circle_PostEaster.jpeg" class="image-near-footer 
+                                rounded-full shadow-item image-near-footer-child" alt="" srcset="">
+                                <div class="w-full lg:pl-4 text-center lg:text-left">
+                                    <p class="text-xs font-300 break-all mt-10 lg:mt-0">Disney's Mickey Mouse
+                                        Colorful
+                                        Blooms
+                                        Bouquet
+                                    </p>
+                                    <div class="flex items-center justify-center lg:justify-start py-1.5">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="font-300 text-sm pl-3 mt-1">12/12/1997</span>
+                                    </div>
+                                    <p class="font-semibold py-2">Great Gift</p>
+                                    <p class="text-sm font-300">
+                                        She absolutely loved it! It looks just as beautiful as the advertised
+                                        picture. I
+                                        was very happy with this purchase and will definitely be shopping here
+                                        again!
+                                    </p>
+                                    <p class="font-semibold text-sm mt-1.5">Rebekah B.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-20 flex-shrink-0 w-full lg:w-auto lg:flex-shrink-1 lg:mb-10 lg:mt-0 lg:pl-12 
+                        item-near-footer relative flex items-center relative">
+                            <div class="w-full rounded-xl mx-auto lg:ml-auto lg:mr-0 text-left flex flex-col lg:flex-row 
+                            items-center p-4 bg-white">
+                                <img src="./images/Tremendous_22_Birthday_crop.jpeg" class="image-near-footer 
+                                rounded-full shadow-item image-near-footer-child" alt="" srcset="">
+                                <div class="w-full lg:pl-4 text-center lg:text-left">
+                                    <p class="text-xs font-300 break-all mt-10 lg:mt-0">Disney's Mickey Mouse
+                                        Colorful
+                                        Blooms
+                                        Bouquet
+                                    </p>
+                                    <div class="flex items-center justify-center lg:justify-start py-1.5">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="font-300 text-sm pl-3 mt-1">12/12/1997</span>
+                                    </div>
+                                    <p class="font-semibold py-2">Great Gift</p>
+                                    <p class="text-sm font-300">
+                                        She absolutely loved it! It looks just as beautiful as the advertised
+                                        picture. I
+                                        was very happy with this purchase and will definitely be shopping here
+                                        again!
+                                    </p>
+                                    <p class="font-semibold text-sm mt-1.5">Rebekah B.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-20 flex-shrink-0 w-full lg:w-auto lg:flex-shrink-1 lg:mb-10 lg:mt-12  
+                        item-near-footer relative flex items-center relative">
+                            <div class="w-full rounded-xl mx-auto lg:ml-auto lg:mr-0 text-left flex flex-col lg:flex-row 
+                            items-center p-4 bg-white">
+                                <img src="./images/Stickerpop_Monarch_Butterfly_crop.jpeg" class="image-near-footer 
+                                rounded-full shadow-item image-near-footer-child" alt="" srcset="">
+                                <div class="w-full lg:pl-4 text-center lg:text-left">
+                                    <p class="text-xs font-300 break-all mt-10 lg:mt-0">Disney's Mickey Mouse
+                                        Colorful
+                                        Blooms
+                                        Bouquet
+                                    </p>
+                                    <div class="flex items-center justify-center lg:justify-start py-1.5">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="font-300 text-sm pl-3 mt-1">12/12/1997</span>
+                                    </div>
+                                    <p class="font-semibold py-2">Great Gift</p>
+                                    <p class="text-sm font-300">
+                                        She absolutely loved it! It looks just as beautiful as the advertised
+                                        picture. I
+                                        was very happy with this purchase and will definitely be shopping here
+                                        again!
+                                    </p>
+                                    <p class="font-semibold text-sm mt-1.5">Rebekah B.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:px-14 flex-shrink-0">
+                    <div class="wrapper slider flex py-8 lg:flex-wrap lg:justify-around">
+                        <div class="mt-20 flex-shrink-0 w-full lg:w-auto lg:flex-shrink-1 lg:mb-10 lg:mt-0 lg:pr-12 
+                        item-near-footer relative flex items-center relative">
+                            <div class="w-full rounded-xl mx-auto lg:ml-auto lg:mr-0 text-left flex flex-col lg:flex-row 
+                                items-center p-4 bg-white">
+                                <img src="./images/just-because.jpeg" class="image-near-footer 
+                                rounded-full shadow-item image-near-footer-child" alt="" srcset="">
+                                <div class="w-full lg:pl-4 text-center lg:text-left">
+                                    <p class="text-xs font-300 break-all mt-10 lg:mt-0">Disney's Mickey Mouse
+                                        Colorful
+                                        Blooms
+                                        Bouquet
+                                    </p>
+                                    <div class="flex items-center justify-center lg:justify-start py-1.5">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="font-300 text-sm pl-3 mt-1">12/12/1997</span>
+                                    </div>
+                                    <p class="font-semibold py-2">Great Gift</p>
+                                    <p class="text-sm font-300">
+                                        She absolutely loved it! It looks just as beautiful as the advertised
+                                        picture. I
+                                        was very happy with this purchase and will definitely be shopping here
+                                        again!
+                                    </p>
+                                    <p class="font-semibold text-sm mt-1.5">Rebekah B.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-20 flex-shrink-0 w-full lg:w-auto lg:flex-shrink-1 lg:mb-10 lg:mt-0 lg:pl-12 
+                        item-near-footer relative flex items-center relative">
+                            <div class="w-full rounded-xl mx-auto lg:ml-auto lg:mr-0 text-left flex flex-col lg:flex-row 
+                            items-center p-4 bg-white">
+                                <img src="./images/PA2643_Playpop_Explorers_The_Cheersquad_Collection_Pouch_1_of_6_crop.jpeg"
+                                    class="image-near-footer 
+                                rounded-full shadow-item image-near-footer-child" alt="" srcset="">
+                                <div class="w-full lg:pl-4 text-center lg:text-left">
+                                    <p class="text-xs font-300 break-all mt-10 lg:mt-0">Disney's Mickey Mouse
+                                        Colorful
+                                        Blooms
+                                        Bouquet
+                                    </p>
+                                    <div class="flex items-center justify-center lg:justify-start py-1.5">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="font-300 text-sm pl-3 mt-1">12/12/1997</span>
+                                    </div>
+                                    <p class="font-semibold py-2">Great Gift</p>
+                                    <p class="text-sm font-300">
+                                        She absolutely loved it! It looks just as beautiful as the advertised
+                                        picture. I
+                                        was very happy with this purchase and will definitely be shopping here
+                                        again!
+                                    </p>
+                                    <p class="font-semibold text-sm mt-1.5">Rebekah B.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-20 flex-shrink-0 w-full lg:w-auto lg:flex-shrink-1 lg:mb-10 lg:mt-12  
+                        item-near-footer relative flex items-center relative">
+                            <div class="w-full rounded-xl mx-auto lg:ml-auto lg:mr-0 text-left flex flex-col lg:flex-row 
+                            items-center p-4 bg-white">
+                                <img src="./images/Garden_4_Pack_Notecards_Lifestyles_crop.jpeg" class="image-near-footer 
+                                rounded-full shadow-item image-near-footer-child" alt="" srcset="">
+                                <div class="w-full lg:pl-4 text-center lg:text-left">
+                                    <p class="text-xs font-300 break-all mt-10 lg:mt-0">Disney's Mickey Mouse
+                                        Colorful
+                                        Blooms
+                                        Bouquet
+                                    </p>
+                                    <div class="flex items-center justify-center lg:justify-start py-1.5">
+                                        <div class="flex items-center gap-0.5 text-xl">
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                            <i class="bx bxs-star text-star"></i>
+                                        </div>
+                                        <span class="font-300 text-sm pl-3 mt-1">12/12/1997</span>
+                                    </div>
+                                    <p class="font-semibold py-2">Great Gift</p>
+                                    <p class="text-sm font-300">
+                                        She absolutely loved it! It looks just as beautiful as the advertised
+                                        picture. I
+                                        was very happy with this purchase and will definitely be shopping here
+                                        again!
+                                    </p>
+                                    <p class="font-semibold text-sm mt-1.5">Rebekah B.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="hidden lg:flex bx bx-chevron-right cursor-pointer w-10 h-10 rounded-full text-2xl 
+            justify-center z-10 items-center text-main bg-white border-main border-solid border 
+            absolute top-1/2 transform right-3 -translate-y-1/2 hover:text-white hover:bg-main 
+            btn-magical-monent">
+            </span>
+        </section>
+
+        <ul id="slider-magical-moment-pagination" class="mx-auto flex pt-8 pb-4 justify-center items-center gap-1">
+            <li class="bg-gray-400 w-2 h-2 rounded-full cursor-pointer"></li>
+            <li class="bg-main w-2 h-2 rounded-full cursor-pointer"></li>
+        </ul>
 
         <section class="px-2 container-main wrapper content-margin">
             <div class="flex items-center gap-8 justify-center mx-auto">
@@ -455,7 +774,9 @@
                 hover:text-white hover:bg-main btn-new-release">
                 </span>
                 <div class="flex-1 relative overflow-hidden">
-                    <p class="mb-6 font-bold text-2.5xl text-center">You May Also Like</p>
+                    <p class="mb-6 font-bold text-2.5xl text-center">Shop New Releases</p>
+                    <a href="" class="absolute top-2.5 hidden lg:block right-0 text-xs font-bold block border-b-2 border-solid 
+                    border-main item-text">See more</a>
                     <div id="slider-new-release" class="slider flex -ml-4 -mr-4">
                         <a href=""
                             class="item-product block w-full mx-auto sm:w-1/2 md:w-1/3 px-4 lg:w-1/4 flex-shrink-0">
@@ -817,10 +1138,10 @@
                 hover:text-white hover:bg-main btn-new-release">
                 </span>
             </div>
-        </section>
-
-        <section class="wrapper h-40 flex justify-center items-center mb-5" style="background-color: #f2f3f5;">
-            CommentBox
+            <div class="text-center lg:hidden my-1">
+                <a href="" class="text-base font-bold border-b-2 border-solid 
+                border-main item-text">See more</a>
+            </div>
         </section>
 
         <footer class="bg-footer px-10 md:px-0 text-white pt-8 pb-6">
@@ -1025,15 +1346,14 @@
     </div>
 
     <input type="text" class="hidden" id="index-current-new-release" value="0">
-    <input type="text" class="hidden" id="index-current-big-slider-image" value="0">
-    <input type="text" class="hidden" id="index-current-small-slider-image" value="4">
+    <input type="text" class="hidden" id="index-current-magical-moment" value="0">
 
     <script src="./js/var.js"></script>
     <script src="./js/function.js"></script>
+    <script src="./js/home.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/cart.js"></script>
     <script src="./js/app.js"></script>
-    <script src="./js/detail-product.js"></script>
 
 </body>
 

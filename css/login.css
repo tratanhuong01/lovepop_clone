@@ -1,0 +1,15 @@
+.wrapper-authentication {
+    width: 320px;
+    margin: auto;
+}
+.wrapper-authentication form {
+    min-height: 320px;
+}
+.button-form {
+    color: #b0b0b0 !important;
+    background-color: #f0f0f0 !important;
+}
+
+.color-form {
+    color: #0379b0;
+}

@@ -1,3 +1,4 @@
+
 * {
     font-family: 'SVN-Gilroy';
 }
@@ -9,6 +10,10 @@
 
 .item-bg:hover {
     background-color: #941924;
+}
+
+.transition-3s {
+    transition: all .3s;
 }
 
 .item-text:hover {

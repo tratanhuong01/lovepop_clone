@@ -36,6 +36,12 @@ const itemProducts = document.getElementsByClassName('item-product');
 const modalCart = document.getElementById('modal-cart');
 const btnCart = document.querySelector('.btn-cart');
 const btnCloseModalCart = document.querySelector('.btn-close-modal-cart');
+const lengthCart = document.getElementById('length-cart');
+const processBarCartBig = document.getElementById('process-bar-cart-big');
+const tableCartMain = document.getElementById('table-cart-main');
+const noCartItem = document.getElementsByClassName('no-cart-item');
+const numberProcessCurrent = document.getElementById('number-process-current');
+const shopCollectionCart = document.getElementById('shop-collection-cart');
 // cart
 
 // detail-product
@@ -48,3 +54,15 @@ const smallButtonSliderImage = document.getElementsByClassName('small-button-sli
 const indexCurrentBigSliderImage = document.getElementById('index-current-big-slider-image');
 const indexCurrentSmallSliderImage = document.getElementById('index-current-small-slider-image');
 // detail-product
+
+// login
+const titleAuthentication = document.querySelector('.title-authentication');
+const formLogin = document.querySelector('.form-login');
+const formRegister = document.querySelector('.form-register');
+const formForgetPassword = document.querySelector('.form-forget-password');
+const btnSignin = document.querySelector('.btn-sign-in');
+const btnCancelForm = document.querySelector('.btn-cancel-form');
+const btnRegister = document.querySelector('.btn-register');
+const btnForgetPassword = document.querySelector('.btn-forget-password');
+// login
+

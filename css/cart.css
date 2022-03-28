@@ -15,3 +15,46 @@
     box-shadow: 0 0 15px rgb(0 0 0 / 15%);
     border: 1px solid #e6e6e6;
 }
+
+.table-cart {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+}
+
+.table-cart tr th {
+    padding: 8px;
+}
+
+.table-cart tr td {
+    padding: 12px 0px 16px 0px;
+}
+
+.table-cart tr th {
+    font-size: 14px;
+    text-align: left;
+}
+
+.tr-popup-table-cart {
+    width: 1px;
+    height: 1px;
+    padding: 3px;
+    position: absolute;
+    border: 1px solid black;
+    font-size: 15px;
+    margin-top: -32px;
+    transition: all .7s;
+    overflow: hidden;
+    display: none;
+}
+
+.item-tr-popup-table-cart:hover .tr-popup-table-cart {
+    width: 300px;
+    height: 31px;
+    left: 0;
+    top: 68px;
+    background-color: white;
+    transform: translateX(-50%);
+    height: auto;
+    display: block;
+}
